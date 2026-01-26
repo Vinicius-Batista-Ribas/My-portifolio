@@ -425,3 +425,64 @@ section {
 .project-link:hover {
   text-decoration: underline;
 }
+
+/* ===== Conteúdo ===== */
+.portfolio-content {
+  display: none;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: 0.3s;
+}
+/* DEV visível */
+#modo-dev:checked ~ .dev-content {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* DADOS visível */
+#modo-dados:checked ~ .dados-content {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+/* COMPLEMENTAR visível */
+#modo-complementar:checked ~ .complement-content {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== Botões ===== */
+.portfolio-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.tab-btn {
+  position: relative;
+  padding: 10px 26px;
+  border: 2px solid #0d6efd;
+  background-color: transparent;
+  color: #0d6efd;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.25s ease;
+}
+
+/* hover */
+.tab-btn:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  transform: translateY(-1px);
+}
+
+#modo-dev:checked ~ .dev-content,
+#modo-dados:checked ~ .dados-content,
+#modo-complementar:checked ~ .complement-content {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
