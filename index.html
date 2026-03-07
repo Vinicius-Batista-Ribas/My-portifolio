@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Vinícius Batista Ribas | Backend Developer Golang • APIs • Cloud</title>
+  <title>Vinícius Batista Ribas | Analista de Dados</title>
 
   <!-- SEO -->
   <meta name="description"
@@ -14,7 +14,7 @@
   <meta name="keywords" content="Backend, Golang, APIs, Docker, Kubernetes, Cloud, Developer" />
   <meta name="author" content="Vinícius Batista Ribas" />
 
-  <link rel="icon" href="img/game.png" />
+  <link rel="icon" href="assets/img/game.png" />
 
   <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
@@ -34,29 +34,32 @@
   <header id="header">
     <div class="d-flex flex-column">
       <aside class="profile">
-        <img src="img/profile/profile.jpg" alt="Foto de Vinícius Batista Ribas"
-          class="img-fluid rounded-circle" loading="lazy" />
+        <img src="assets/img/profile/profile.jpg" alt="Foto de Vinícius Batista Ribas" class="img-fluid rounded-circle"
+          loading="lazy" />
 
         <h1 class="text-light">
           <a href="index.html">Vinícius Batista Ribas</a>
         </h1>
 
-        <p class="text-center text-light">Backend Developer</p>
+        <p class="text-center text-light">Analista de Dados</p>
 
         <div class="social-links mt-3 text-center">
-          <a href="https://wa.me/5538988293796" target="_blank" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
-          <a href="https://github.com/Vinicius-Batista-Ribas" target="_blank" aria-label="GitHub"><i class="bi bi-github"></i></a>
-          <a href="https://www.linkedin.com/in/vinícius-batista-ribas" target="_blank" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+          <a href="mailto:vinicius_batista@gec.inatel.br" aria-label="Email"><i class="bi bi-envelope"></i></a>
+          <a href="https://github.com/Vinicius-Batista-Ribas" target="_blank" aria-label="GitHub"><i
+              class="bi bi-github"></i></a>
+          <a href="https://www.linkedin.com/in/vinícius-batista-ribas" target="_blank" aria-label="LinkedIn"><i
+              class="bi bi-linkedin"></i></a>
         </div>
       </aside>
 
       <nav id="navbar" class="nav-menu navbar">
         <ul>
-          <li><a href="#hero" class="nav-link scrollto active">Home</a></li>
-          <li><a href="#about" class="nav-link scrollto">Sobre</a></li>
-          <li><a href="#resume" class="nav-link scrollto">Resumo</a></li>
-          <li><a href="#portfolio" class="nav-link scrollto">Projetos</a></li>
-          <li><a href="assets/Vinicius-batista-ribas.pdf" download>Currículo</a></li>
+          <li><a href="#hero" class="bi bi-house"> Home</a></li>
+          <li><a href="#about" class="bi bi-person-circle">Sobre</a></li>
+          <li><a href="#resume" class="bi bi-file-earmark-text">Resumo</a></li>
+          <li><a href="#portfolio" class="bi bi-images">Projetos</a></li>
+          <li><a href="#contact" class="bi bi-envelope">Contato</a></li>
+          <li><a href="assets/Vinicius-batista-ribas.pdf" class="bi bi-file-arrow-down" download>Currículo</a></li>
         </ul>
       </nav>
     </div>
@@ -66,7 +69,7 @@
   <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
     <div class="hero-container text-center">
       <h1>Vinícius Batista Ribas</h1>
-      <p>Backend Developer • Golang • APIs REST • Docker • Kubernetes</p>
+      <p>Analista de Dados • Python • SQL • Power BI • Excel</p>
     </div>
   </section>
 
@@ -80,26 +83,27 @@
         </div>
 
         <div class="row">
-          <div class="col-lg-4">
-            <img src="img/profile/profile-2.jpg" class="img-fluid" alt="Foto profissional" loading="lazy" />
+          <div class="col-lg-4 d-flex align-items-center justify-content-center">
+            <img src="assets/img/profile/profile-2.jpg" class="img-fluid profile-img" alt="Foto profissional" loading="lazy" />
           </div>
 
           <div class="col-lg-8 pt-4 content">
-            <h3>Desenvolvedor Backend</h3>
+            <h3>Analista de Dados</h3>
             <p class="fst-italic">
-              Engenheiro da Computação com foco em desenvolvimento backend e arquitetura de sistemas distribuídos.
-              Experiência prática com microsserviços em Golang, APIs REST, Docker e Kubernetes, atuando desde o
-              desenvolvimento até a entrega em ambientes com CI/CD.
+              Profissional com formação em Engenharia da Computação e foco em análise e interpretação de dados para
+              apoio à tomada de decisão.
+              Experiência prática com manipulação e organização de dados, desenvolvimento de consultas SQL, construção
+              de dashboards e análise exploratória utilizando ferramentas como Excel, Power BI e Python.
+              Vivência com bancos de dados relacionais e NoSQL, tratamento e estruturação de dados, além de boas
+              práticas de organização e documentação de informações.
+              Interesse contínuo em análise de dados, visualização de indicadores (KPIs) e geração de insights que
+              apoiem decisões estratégicas.
             </p>
             <p>
               Vivência com bancos de dados relacionais e NoSQL, testes automatizados, boas práticas de código e
               versionamento. Interesse contínuo em sistemas escaláveis, observabilidade e qualidade de software.
             </p>
 
-            <ul>
-              <li><strong>Email:</strong> vinicius_batista@gec.inatel.br</li>
-              <li><strong>Formação:</strong> Engenharia da Computação</li>
-            </ul>
           </div>
         </div>
       </div>
@@ -108,168 +112,251 @@
     <!-- Resume -->
     <section id="resume" class="resume">
       <div class="container">
+        <div class="row">
 
-        <h3 class="resume-title">Experiência</h3>
-        <article class="resume-item">
-          <h4>Estagiário Backend</h4>
-          <h5>2022 – 2023</h5>
-          <p><em>Sensedia • Campinas - SP</em></p>
-          <ul>
-            <li>Desenvolvimento de microsserviços em Golang utilizando Docker e Kubernetes.</li>
-            <li>Criação e manutenção de APIs REST com versionamento e validações.</li>
-            <li>Implementação de testes automatizados (~80% de cobertura).</li>
-            <li>Integração contínua e entrega automatizada via CI/CD.</li>
-          </ul>
-        </article>
+          <div class="col-lg-6">
+            <h3 class="resume-title">Formação</h3>
+            <article class="resume-item">
+              <h4>Engenharia da Computação</h4>
+              <h6>Conclusão: Dezembro de 2024</h6>
+              <p><em>Instituto Nascional de Telecomunicções</em></p>
+            </article>
 
-        <h3 class="resume-title">Habilidades Técnicas</h3>
-        <div class="row g-4">
-          <div class="col-md-6"><strong>Backend:</strong> Golang, Python, APIs REST, Testes Automatizados</div>
-          <div class="col-md-6"><strong>Bancos:</strong> PostgreSQL, MongoDB</div>
-          <div class="col-md-6"><strong>DevOps:</strong> Docker, Docker Compose, Kubernetes, CI/CD</div>
-          <div class="col-md-6"><strong>Outros:</strong> Git, Linux, Arquitetura em Camadas</div>
+            <h3 class="resume-title">Experiência</h3>
+            <article class="resume-item">
+              <h4>Estagiário Backend</h4>
+              <h5>2022 – 2023</h5>
+              <p><em>Sensedia • Campinas - SP</em></p>
+              <ul>
+                <li>Desenvolvimento de microsserviços em Golang utilizando Docker e Kubernetes.</li>
+                <li>Criação e manutenção de APIs REST com versionamento e validações.</li>
+                <li>Implementação de testes automatizados (~80% de cobertura).</li>
+                <li>Integração contínua e entrega automatizada via CI/CD.</li>
+              </ul>
+            </article>
+          </div>
+
+          <div class="col-lg-6">
+            <article class="resume-item">
+              <h3 class="resume-title">Habilidades Técnicas</h3>
+              <ul>
+                <li><strong>Análise de Dados:</strong> Python, Excel, Power BI, Análise Exploratória de Dados (EDA),
+                  criação de dashboards e indicadores (KPIs)</li>
+                <li><strong>Manipulação e Processamento de Dados:</strong> Pandas, tratamento e limpeza de dados,
+                  transformação de dados e preparação para análise</li>
+                <li><strong>Bancos de Dados:</strong> PostgreSQL, MongoDB, consultas SQL e organização de dados</li>
+                <li><strong>Programação:</strong> Python aplicado à análise de dados e automação de processos</li>
+                <li><strong>Ferramentas e Ambiente:</strong> Git, Linux</li>
+
+              </ul>
+            </article>
+
+
+            <article class="resume-item">
+              <h3 class="resume-title ">Diferenciais</h3>
+              <ul>
+                <li>Arquitetura de APIs escaláveis e bem organizadas</li>
+                <li>Experiência prática com microsserviços</li>
+                <li>Testes automatizados e foco em qualidade</li>
+                <li>Ambientes cloud-ready e containers</li>
+              </ul>
+            </article>
+          </div>
         </div>
-
-        <h3 class="resume-title mt-4">Diferenciais</h3>
-        <ul>
-          <li>Arquitetura de APIs escaláveis e bem organizadas</li>
-          <li>Experiência prática com microsserviços</li>
-          <li>Testes automatizados e foco em qualidade</li>
-          <li>Ambientes cloud-ready e containers</li>
-        </ul>
       </div>
     </section>
 
     <!-- Portfolio -->
-    <section id="portfolio" class="section-bg">
+    <section id="portfolio" class="portfolio section-bg">
       <div class="container">
+
         <div class="section-title">
-          <h2>Projetos Backend</h2>
+          <h2>Projetos de Análise de Dados</h2>
+          <p>Alguns dashboards e análises desenvolvidas utilizando ferramentas de Data Analytics.</p>
         </div>
 
-        <div class="row">
-          <div class="col-lg-6">
-            <article class="project-card">
-              <h4>API REST em Golang (Gin)</h4>
+        <div class="project-list">
+
+          <!-- Projeto 1 -->
+          <div class="project-item">
+
+            <div class="project-image">
+              <img src="assets/img/d100.jpg" alt="Dashboard de Vendas">
+            </div>
+
+            <div class="project-info">
+              <h4>Dashboard de Vendas</h4>
+
               <p>
-                API para gerenciamento de alunos desenvolvida em Golang com Gin, seguindo arquitetura em camadas
-                (handlers, services e repositories). Inclui validação de dados sensíveis, persistência com
-                PostgreSQL via GORM e containerização com Docker Compose.
+                Dashboard interativo desenvolvido para análise de desempenho de vendas.
+                Permite acompanhar faturamento mensal, produtos mais vendidos,
+                regiões com maior volume de vendas e tendências de crescimento.
               </p>
+
               <ul class="tech-list">
-                <li>Golang • Gin • GORM</li>
-                <li>PostgreSQL</li>
-                <li>Docker • Docker Compose</li>
+                <li>Python</li>
+                <li>Pandas</li>
+                <li>Power BI</li>
+                <li>SQL</li>
               </ul>
-              <a href="https://github.com/Vinicius-Batista-Ribas/APi-GIN-GO" target="_blank" class="project-link">Ver projeto</a>
-            </article>
+
+              <a href="#" class="project-link" target="_blank">Ver Projeto</a>
+            </div>
+
           </div>
 
-          <div class="col-lg-6">
-            <article class="project-card">
-              <h4>Mods API (FastAPI)</h4>
+
+          <!-- Projeto 2 -->
+          <div class="project-item">
+
+            <div class="project-image">
+              <img src="assets/img/d20.webp" alt="Análise de Churn">
+            </div>
+
+            <div class="project-info">
+              <h4>Análise de Churn de Clientes</h4>
+
               <p>
-                API REST assíncrona para gerenciamento de mods de jogos, desenvolvida com FastAPI. Implementa CRUD
-                completo, filtros dinâmicos, validação com Pydantic e persistência com PostgreSQL utilizando asyncpg.
+                Análise exploratória de dados para identificar padrões de cancelamento
+                de clientes. O projeto utiliza técnicas estatísticas e visualizações
+                para encontrar fatores que impactam na retenção.
               </p>
+
               <ul class="tech-list">
-                <li>Python • FastAPI • Pydantic</li>
-                <li>PostgreSQL • asyncpg</li>
-                <li>Docker • Docker Compose</li>
+                <li>Python</li>
+                <li>Pandas</li>
+                <li>Matplotlib</li>
+                <li>Scikit-Learn</li>
               </ul>
-              <a href="https://github.com/Vinicius-Batista-Ribas" target="_blank" class="project-link">Ver projeto</a>
-            </article>
+
+              <a href="#" class="project-link" target="_blank">Ver Projeto</a>
+            </div>
+
           </div>
+
         </div>
+
       </div>
     </section>
 
     <!-- ======= Certificados ======= -->
-<section id="certificados" class="section-bg">
-  <div class="container">
+    <section id="certificados" class="section-bg">
+      <div class="container">
 
-    <div class="section-title">
-      <h2>Certificados</h2>
-      <p>Formação técnica complementar com foco em Backend e DevOps.</p>
-    </div>
-
-    <!-- Backend -->
-    <h3 class="certificados-subtitle">Backend (Golang)</h3>
-    <div class="row certificados-container">
-        
-
-        <div class="col-lg-4 col-md-6 certificados-item">
-            <a href="img/certificados/GO.png" class="portfolio-lightbox d-block" data-gallery="devopsGallery">
-                <img src="img/certificados/GO.png" class="img-fluid rounded mx-auto d-block certificados-img" alt="Certificado Redes IP"> 
-            </a> 
+        <div class="section-title">
+          <h2>Certificados</h2>
+          <p>Formação técnica complementar com foco em Análise de Dados.</p>
         </div>
 
-        <div class="col-lg-4 col-md-6 certificados-item">
-            <a href="img/certificados/GO-WEB.png" class="portfolio-lightbox d-block" data-gallery="devopsGallery">
-                <img src="img/certificados/GO-WEB.png" class="img-fluid rounded mx-auto d-block certificados-img" alt="Certificado Redes IP"> 
-            </a> 
+        <!-- Análise de Dados -->
+        <h3 class="certificados-subtitle">Power BI</h3>
+        <div class="row certificados-container">
+
+          <div class="col-lg-4 col-md-6 certificados-item">
+            <a href="assets/img/certificados/powerbi.jpg" class="portfolio-lightbox d-block" data-gallery="devopsGallery">
+              <img src="assets/img/certificados/powerbi.jpg" class="img-fluid rounded mx-auto d-block certificados-img"
+                alt="Certificado Redes IP">
+            </a>
+          </div>
+
         </div>
 
-        <div class="col-lg-4 col-md-6 certificados-item">
-            <a href="img/certificados/GO-GIN.png" class="portfolio-lightbox d-block" data-gallery="devopsGallery">
-                <img src="img/certificados/GO-GIN.png" class="img-fluid rounded mx-auto d-block certificados-img" alt="Certificado Redes IP"> 
-            </a> 
+        <h3 class="certificados-subtitle">Excel</h3>
+        <div class="row certificados-container">
+
+
         </div>
 
-    </div>
+        <h3 class="certificados-subtitle">SQL</h3>
+        <div class="row certificados-container">
 
-    <!-- DevOps -->
-    <h3 class="certificados-subtitle mt-4">DevOps</h3>
-    <div class="row certificados-container">
 
-        <div class="col-lg-4 col-md-6 certificados-item">
-            <a href="img/certificados/Docker.png" class="portfolio-lightbox d-block" data-gallery="devopsGallery">
-                <img src="img/certificados/Docker.png" class="img-fluid rounded mx-auto d-block certificados-img" alt="Certificado Redes IP"> 
-            </a> 
         </div>
 
-      <div class="col-lg-4 col-md-6 certificados-item">
-            <a href="img/certificados/KUBERNETES.png" class="portfolio-lightbox d-block" data-gallery="devopsGallery">
-                <img src="img/certificados/KUBERNETES.png" class="img-fluid rounded mx-auto d-block certificados-img" alt="Certificado Redes IP"> 
-            </a> 
+        <h3 class="certificados-subtitle">Python para Dados</h3>
+        <div class="row certificados-container">
+
+          <div class="col-lg-4 col-md-6 certificados-item">
+            <a href="assets/img/certificados/python para dados.png" class="portfolio-lightbox d-block" data-gallery="devopsGallery">
+              <img src="assets/img/certificados/python para dados.png" class="img-fluid rounded mx-auto d-block certificados-img"
+                alt="Certificado Redes IP">
+            </a>
+          </div>
+
         </div>
-      
-      <div class="col-lg-4 col-md-6 certificados-item">
-            <a href="img/certificados/GIT.png" class="portfolio-lightbox d-block" data-gallery="devopsGallery">
-                <img src="img/certificados/GIT.png" class="img-fluid rounded mx-auto d-block certificados-img" alt="Certificado Redes IP"> 
-            </a> 
+        <!-- DevOps -->
+        <h3 class="certificados-subtitle mt-4">Certificados Técnicos</h3>
+        <div class="row certificados-container">
+
+          <div class="col-lg-4 col-md-6 certificados-item">
+            <a href="assets/img/certificados/Docker.png" class="portfolio-lightbox d-block" data-gallery="devopsGallery">
+              <img src="assets/img/certificados/Docker.png" class="img-fluid rounded mx-auto d-block certificados-img"
+                alt="Certificado Redes IP">
+            </a>
+          </div>
+
+          <div class="col-lg-4 col-md-6 certificados-item">
+            <a href="assets/img/certificados/KUBERNETES.png" class="portfolio-lightbox d-block" data-gallery="devopsGallery">
+              <img src="assets/img/certificados/KUBERNETES.png" class="img-fluid rounded mx-auto d-block certificados-img"
+                alt="Certificado Redes IP">
+            </a>
+          </div>
+
+          <div class="col-lg-4 col-md-6 certificados-item">
+            <a href="assets/img/certificados/GIT.png" class="portfolio-lightbox d-block" data-gallery="devopsGallery">
+              <img src="assets/img/certificados/GIT.png" class="img-fluid rounded mx-auto d-block certificados-img"
+                alt="Certificado Redes IP">
+            </a>
+          </div>
+
         </div>
 
-    </div>
+        <!-- Complementar -->
+        <h3 class="certificados-subtitle mt-5">Formação Complementar</h3>
+        <div class="row certificados-container">
 
-    <!-- Complementar -->
-    <h3 class="certificados-subtitle mt-5">Formação Complementar</h3>
-    <div class="row certificados-container">
+          <div class="col-lg-4 col-md-6 certificados-item">
+            <a href="assets/img/certificados/LGPD-I.png" class="portfolio-lightbox d-block" data-gallery="devopsGallery">
+              <img src="assets/img/certificados/LGPD-I.png" class="img-fluid rounded mx-auto d-block certificados-img"
+                alt="Certificado Redes IP">
+            </a>
+          </div>
 
-      <div class="col-lg-4 col-md-6 certificados-item">
-            <a href="img/certificados/LGPD-I.png" class="portfolio-lightbox d-block" data-gallery="devopsGallery">
-                <img src="img/certificados/LGPD-I.png" class="img-fluid rounded mx-auto d-block certificados-img" alt="Certificado Redes IP"> 
-            </a> 
         </div>
 
-      <div class="col-lg-4 col-md-6 certificados-item">
-            <a href="img/certificados/SECURITY.png" class="portfolio-lightbox d-block" data-gallery="devopsGallery">
-                <img src="img/certificados/SECURITY.png" class="img-fluid rounded mx-auto d-block certificados-img" alt="Certificado Redes IP"> 
-            </a> 
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="section-title">
+          <h2 class="text-center">Contato</h2>
+          <p class="text-center mt-3">
+            Entre em contato comigo através das redes abaixo.
+          </p>
+          <div class="social-links  text-center">
+
+            <a href="mailto:vinicius_batista@gec.inatel.br" aria-label="Email">
+              <i class="bi bi-envelope"></i>
+            </a>
+
+            <a href="https://wa.me/5538988293796" target="_blank" rel="noopener" aria-label="WhatsApp">
+              <i class="bi bi-whatsapp"></i>
+            </a>
+
+            <a href="https://www.instagram.com/vinii_ribas/" target="_blank" rel="noopener" aria-label="Instagram">
+              <i class="bi bi-instagram"></i>
+            </a>
+
+            <a href="https://www.linkedin.com/in/vinícius-batista-ribas" target="_blank" rel="noopener"
+              aria-label="LinkedIn">
+              <i class="bi bi-linkedin"></i>
+            </a>
+
+          </div>
         </div>
-
-      <div class="col-lg-4 col-md-6 certificados-item">
-            <a href="img/certificados/Redes-ip.png"class="portfolio-lightbox d-block" data-gallery="devopsGallery">
-                <img src="img/certificados/Redes-ip.png"class="img-fluid rounded mx-auto d-block certificados-img" alt="Certificado Redes IP"> 
-            </a> 
-        </div>
-
-    </div>
-
-  </div>  
-</section>
-
-
+      </div>
+    </section>
   </main>
 
   <!-- Footer -->
@@ -288,4 +375,5 @@
   <script>GLightbox({ selector: '.portfolio-lightbox' });</script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
