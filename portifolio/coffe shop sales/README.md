@@ -1,7 +1,8 @@
 # ☕ Coffee Shop Sales Analysis
 
-Projeto de **Análise Exploratória de Dados (EDA)** utilizando dados de vendas de uma cafeteria fictícia.  
-O objetivo é identificar **padrões de consumo, horários de maior movimento e produtos mais vendidos**, gerando insights que poderiam auxiliar decisões de negócio.
+Projeto de **Análise Exploratória de Dados (EDA)** utilizando dados de vendas de uma cafeteria fictícia.
+
+A análise foi realizada utilizando o **Google Sheets**, com foco na criação de gráficos e identificação de padrões de consumo, horários de maior movimento e produtos mais vendidos.
 
 ---
 
@@ -40,23 +41,45 @@ Esses dados permitem analisar **padrões de consumo e tendências de vendas**.
 
 O maior volume de transações ocorre entre **8h e 10h**, com pico próximo das **10h da manhã**.
 
-Isso sugere que a cafeteria possui maior demanda durante o período da manhã, possivelmente devido ao consumo de café antes do início do trabalho ou atividades diárias.
+Isso sugere que a cafeteria possui maior demanda durante o período da manhã, possivelmente devido ao consumo de café antes do início do trabalho ou das atividades diárias.
 
 ---
 
-# ☕ Produtos mais vendidos
+# ☕ Categoria de produtos mais vendidas
 
 ![Produtos mais vendidos](images/produto_mais_vendido.png)
 
 ### Insight
 
-Os produtos mais vendidos são:
+As categorias mais vendidas são:
 
 1. Coffee  
 2. Tea  
 3. Bakery  
 
 Essas três categorias representam **a maior parte das vendas**, indicando que bebidas quentes e acompanhamentos são os principais produtos consumidos pelos clientes.
+
+---
+
+# ☕ Produtos com maior volume de vendas e lucro
+
+### Insight
+
+Os produtos com maior volume de vendas são:
+
+1. Brewed Chai Tea  
+2. Gourmet Brewed Coffee  
+3. Barista Espresso  
+
+Esses produtos representam **os itens mais vendidos da cafeteria**.
+
+No entanto, ao analisar a **renda gerada por produto**, observa-se que os itens com maior contribuição para o faturamento são:
+
+1. Barista Espresso  
+2. Brewed Chai Tea  
+3. Hot Chocolate  
+
+Isso mostra que **nem sempre o produto mais vendido é o que gera maior receita**, sendo importante analisar tanto volume quanto faturamento.
 
 ---
 
@@ -86,8 +109,10 @@ A análise mostra uma **tendência de crescimento da receita ao longo dos meses*
 
 - O **período da manhã concentra a maior parte das vendas**.
 - **Café e chá dominam as transações** da loja.
-- O volume de vendas é relativamente **estável ao longo da semana**.
-- A **receita apresenta crescimento gradual** ao longo do tempo.
+- O volume de vendas é relativamente **estável ao longo da semana**, com menor número de vendas aos sábados.
+- As lojas apresentam receita semelhante, porém **a unidade Hell's Kitchen apresenta o maior faturamento**.
+- Apesar do **Brewed Chai Tea ser o produto mais vendido**, o **Barista Espresso é o produto que gera maior receita**.
+- A **receita apresenta crescimento gradual ao longo do tempo**.
 
 Essas informações poderiam ajudar na tomada de decisões como:
 
@@ -97,23 +122,11 @@ Essas informações poderiam ajudar na tomada de decisões como:
 
 ---
 
-# 🛠 Tecnologias Utilizadas
+# 🛠 Ferramentas Utilizadas
 
-- Python  
-- Pandas  
-- Matplotlib  
-- Jupyter Notebook  
-
----
-
-# 📌 Possíveis Melhorias Futuras
-
-Algumas análises adicionais que poderiam ser realizadas:
-
-- Análise de **ticket médio por cliente**
-- Segmentação de vendas por **tipo de produto**
-- Análise de **sazonalidade**
-- **Previsão de vendas** utilizando modelos de Machine Learning
+- Google Sheets
+- Análise exploratória de dados (EDA)
+- Visualização de dados
 
 ---
 
