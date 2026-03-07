@@ -36,7 +36,7 @@ Esses dados permitem analisar **padrões de consumo e tendências de vendas**.
 
 # 📈 Horário de maior movimento
 
-![Horário de maior movimento]([images/horario_maior_movimento.png](https://github.com/Vinicius-Batista-Ribas/My-portifolio/blob/main/portifolio/coffe%20shop%20sales/images/Hor%C3%A1rio%20de%20maior%20movimento.png?raw=true))
+![Horário de maior movimento](https://github.com/Vinicius-Batista-Ribas/My-portifolio/blob/main/portifolio/coffe%20shop%20sales/images/Hor%C3%A1rio%20de%20maior%20movimento.png?raw=true)
 
 ### Insight
 
@@ -48,7 +48,7 @@ Isso sugere que a cafeteria possui maior demanda durante o período da manhã, p
 
 # ☕ Categoria de produtos mais vendidas
 
-![Categoria de produtos mais vendidos]([images/produto_mais_vendido.png](https://github.com/Vinicius-Batista-Ribas/My-portifolio/blob/main/portifolio/coffe%20shop%20sales/images/Categoria%20dos%20produtos%20mais%20vendidos.png?raw=true))
+![Categoria de produtos mais vendidos](https://github.com/Vinicius-Batista-Ribas/My-portifolio/blob/main/portifolio/coffe%20shop%20sales/images/Categoria%20dos%20produtos%20mais%20vendidos.png?raw=true)
 
 ### Insight
 
@@ -100,7 +100,7 @@ A unidade localizada em **Hell's Kitchen apresenta o maior número de vendas** e
 
 # 📅 Vendas por dia da semana
 
-![Vendas por dia]([images/vendas_por_dia.png](https://github.com/Vinicius-Batista-Ribas/My-portifolio/blob/main/portifolio/coffe%20shop%20sales/images/Qual%20dia%20possui%20mais%20vendas.png?raw=true))
+![Vendas por dia](https://github.com/Vinicius-Batista-Ribas/My-portifolio/blob/main/portifolio/coffe%20shop%20sales/images/Qual%20dia%20possui%20mais%20vendas.png?raw=true)
 
 ### Insight
 
@@ -112,7 +112,7 @@ Isso pode indicar maior fluxo de clientes no final da semana.
 
 # 💰 Receita ao longo dos meses
 
-![Renda por mês]([images/renda_por_mes.png](https://github.com/Vinicius-Batista-Ribas/My-portifolio/blob/main/portifolio/coffe%20shop%20sales/images/Renda%20por%20m%C3%AAs.png?raw=true))
+![Renda por mês](https://github.com/Vinicius-Batista-Ribas/My-portifolio/blob/main/portifolio/coffe%20shop%20sales/images/Renda%20por%20m%C3%AAs.png?raw=true)
 
 ### Insight
 
