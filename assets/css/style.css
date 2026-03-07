@@ -321,6 +321,7 @@ section {
 
 .certificados-item {
   margin-bottom: 30px;
+  
 }
 
 .certificados-img {
@@ -328,11 +329,14 @@ section {
   height: 200px;
   object-fit: cover;
   transition: 0.3s;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  border: 4px solid #e0e0e0;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
 }
 
 .certificados-img:hover {
-  transform: scale(1.03);
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.25);
 }
 /* ==================================================
    Footer
