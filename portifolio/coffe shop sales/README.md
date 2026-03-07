@@ -4,7 +4,17 @@ Projeto de **Análise Exploratória de Dados (EDA)** utilizando dados de vendas 
 
 A análise foi realizada utilizando o **Google Sheets**, com foco na criação de gráficos e identificação de padrões de consumo, horários de maior movimento e produtos mais vendidos.
 
----
+🔗 **Planilha utilizada na análise:**  
+https://docs.google.com/spreadsheets/d/1E2PLPNRFCvTyCOySs4O7YP-Lphbt8oh9wsW-Rm5bIfU/edit?usp=sharing
+
+📊 **Fonte dos dados:**  
+Dataset proveniente do desafio de análise de dados da plataforma **Maven Analytics**.
+
+🌐 https://app.mavenanalytics.io/
+
+📁 **Observação:**  
+A planilha utilizada para a análise também está disponível neste repositório.
+
 
 # 📊 Objetivo do Projeto
 
