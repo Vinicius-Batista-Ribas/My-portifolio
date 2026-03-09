@@ -46,7 +46,7 @@ Esses dados permitem analisar **padrões de consumo e tendências de vendas**.
 
 # 📈 Horário de maior movimento
 
-![Horário de maior movimento](https://github.com/Vinicius-Batista-Ribas/My-portifolio/blob/main/portifolio/coffe%20shop%20sales/images/Hor%C3%A1rio%20de%20maior%20movimento.png?raw=true)
+![Horário de maior movimento](https://github.com/Vinicius-Batista-Ribas/My-portifolio/blob/main/portifolio/coffe_shop_sales/images/Maior_movimento.png?raw=true)
 
 ### Insight
 
@@ -58,7 +58,7 @@ Isso sugere que a cafeteria possui maior demanda durante o período da manhã, p
 
 # ☕ Categoria de produtos mais vendidas
 
-![Categoria de produtos mais vendidos](https://github.com/Vinicius-Batista-Ribas/My-portifolio/blob/main/portifolio/coffe%20shop%20sales/images/Categoria%20dos%20produtos%20mais%20vendidos.png?raw=true)
+![Categoria de produtos mais vendidos](https://github.com/Vinicius-Batista-Ribas/My-portifolio/blob/main/portifolio/coffe_shop_sales/images/Vendas_categorias.png?raw=true)
 
 ### Insight
 
@@ -74,7 +74,8 @@ Essas três categorias representam **a maior parte das vendas**, indicando que b
 
 # ☕ Produtos com maior volume de vendas e lucro
 
-![Produtos mais vendidos](https://github.com/Vinicius-Batista-Ribas/My-portifolio/blob/main/portifolio/coffe%20shop%20sales/images/Quantidade%20de%20vendas%20dos%20produtos.png?raw=true)
+![Produtos mais vendidos](https://github.com/Vinicius-Batista-Ribas/My-portifolio/blob/main/portifolio/coffe_shop_sales/images/Vendas_produtos.png?raw=true)
+
 
 ### Insight
 
@@ -92,7 +93,7 @@ No entanto, ao analisar a **renda gerada por produto**, observa-se que os itens 
 2. Brewed Chai Tea  
 3. Hot Chocolate
 
-![Renda dos produtos](https://github.com/Vinicius-Batista-Ribas/My-portifolio/blob/main/portifolio/coffe%20shop%20sales/images/Renda%20por%20Produto.png?raw=true).
+![Renda dos produtos](https://github.com/Vinicius-Batista-Ribas/My-portifolio/blob/main/portifolio/coffe_shop_sales/images/Renda_produto.png?raw=true)
 
 Isso mostra que **nem sempre o produto mais vendido é o que gera maior receita**, sendo importante analisar tanto volume quanto faturamento.
 
@@ -100,7 +101,7 @@ Isso mostra que **nem sempre o produto mais vendido é o que gera maior receita*
 
 # 📅 Vendas por lojas
 
-![Vendas por loja](https://github.com/Vinicius-Batista-Ribas/My-portifolio/blob/main/portifolio/coffe%20shop%20sales/images/Receita%20por%20cidade.png?raw=true)
+![Vendas por loja](https://github.com/Vinicius-Batista-Ribas/My-portifolio/blob/main/portifolio/coffe_shop_sales/images/Renda_cidade.png?raw=true)
 
 ### Insight
 
@@ -110,7 +111,7 @@ A unidade localizada em **Hell's Kitchen apresenta o maior número de vendas** e
 
 # 📅 Vendas por dia da semana
 
-![Vendas por dia](https://github.com/Vinicius-Batista-Ribas/My-portifolio/blob/main/portifolio/coffe%20shop%20sales/images/Qual%20dia%20possui%20mais%20vendas.png?raw=true)
+![Vendas por dia](https://github.com/Vinicius-Batista-Ribas/My-portifolio/blob/main/portifolio/coffe_shop_sales/images/Vendas_semana.png?raw=true)
 
 ### Insight
 
@@ -122,7 +123,7 @@ Isso pode indicar maior fluxo de clientes no final da semana.
 
 # 💰 Receita ao longo dos meses
 
-![Renda por mês](https://github.com/Vinicius-Batista-Ribas/My-portifolio/blob/main/portifolio/coffe%20shop%20sales/images/Renda%20por%20m%C3%AAs.png?raw=true)
+![Renda por mês](https://github.com/Vinicius-Batista-Ribas/My-portifolio/blob/main/portifolio/coffe_shop_sales/images/Renda_mes.png?raw=true)
 
 ### Insight
 
