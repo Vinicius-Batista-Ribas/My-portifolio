@@ -1,0 +1,35 @@
+# Netflix Data Analysis
+
+Projeto de análise exploratória de dados do catálogo da Netflix utilizando Python.
+
+## Tecnologias utilizadas
+
+- Python
+- Pandas
+- Matplotlib
+- Seaborn
+
+## Objetivo
+
+Explorar o catálogo da Netflix para identificar padrões relacionados a:
+
+- Tipos de conteúdo
+- Países produtores
+- Gêneros mais populares
+- Crescimento do catálogo ao longo do tempo
+- Distribuição de classificações indicativas
+
+## Principais análises
+
+✔ Filmes vs séries  
+✔ Países com mais produções  
+✔ Gêneros mais comuns  
+✔ Conteúdos adicionados por ano  
+✔ Distribuição de ratings
+
+## Estrutura do projeto
+- data/
+- notebooks/
+- images/
+
+README.md
