@@ -4,18 +4,6 @@ Projeto de **Análise Exploratória de Dados (EDA)** utilizando dados de vendas 
 
 A análise foi realizada utilizando o **Google Sheets**, com foco na criação de gráficos e identificação de padrões de consumo, horários de maior movimento e produtos mais vendidos.
 
-🔗 **Planilha utilizada na análise:**  
-https://docs.google.com/spreadsheets/d/1E2PLPNRFCvTyCOySs4O7YP-Lphbt8oh9wsW-Rm5bIfU/edit?usp=sharing
-
-📊 **Fonte dos dados:**  
-Dataset proveniente do desafio de análise de dados da plataforma **Maven Analytics**.
-
-🌐 https://app.mavenanalytics.io/
-
-📁 **Observação:**  
-A planilha utilizada para a análise também está disponível neste repositório.
-
-
 # 📊 Objetivo do Projeto
 
 Este projeto busca responder algumas perguntas importantes:
@@ -38,9 +26,12 @@ O conjunto de dados contém informações sobre transações realizadas em uma c
 - Quantidade de transações
 - Local das lojas
 - Dia da semana
-- Receita mensal
+- Receita gerada
 
-Esses dados permitem analisar **padrões de consumo e tendências de vendas**.
+📊 **Fonte dos dados:** 
+Dataset proveniente do desafio de análise de dados da plataforma **Maven Analytics**.
+
+🌐 https://app.mavenanalytics.io/
 
 ---
 
@@ -131,6 +122,16 @@ A análise mostra uma **tendência de crescimento da receita ao longo dos meses*
 
 ---
 
+# 📊 Dashboard
+
+Foi criado um dashboard no Google Sheets para consolidar as principais métricas de vendas.
+
+![Renda por mês](https://github.com/Vinicius-Batista-Ribas/My-portifolio/blob/main/portifolio/coffe_shop_sales/images/Renda_mes.png?raw=true)
+
+🔗 **Planilha utilizada na análise:**  
+https://docs.google.com/spreadsheets/d/1E2PLPNRFCvTyCOySs4O7YP-Lphbt8oh9wsW-Rm5bIfU/edit?usp=sharing
+
+---
 # 🔎 Principais Insights
 
 - O **período da manhã concentra a maior parte das vendas**.
@@ -145,6 +146,22 @@ Essas informações poderiam ajudar na tomada de decisões como:
 - ajuste de equipe nos horários de pico
 - otimização do estoque
 - criação de promoções estratégicas
+
+---
+
+# 🔎 Recomendações de Negócio
+
+- O horário de maior movimento ocorre durante a manhã, especialmente entre **7h e 10h**.  
+  **Aumentar a quantidade de funcionários nesse período pode melhorar o atendimento ao cliente e reduzir o tempo de espera.**
+
+- **Café e chá** são os produtos mais vendidos, indicando alta demanda por bebidas quentes.  
+  **Uma estratégia possível seria ampliar a oferta de cafés premium para aumentar o ticket médio das vendas.**
+
+- O volume de vendas é menor durante o fim de semana, especialmente aos **sábados**.  
+  **Promoções ou combos promocionais poderiam ser introduzidos nesses dias para estimular a demanda.**
+
+- O **Barista Espresso** é o produto que gera maior receita, embora não seja o mais vendido.  
+  **Promover esse produto pode ser uma estratégia interessante para aumentar a rentabilidade da loja.**
 
 ---
 
