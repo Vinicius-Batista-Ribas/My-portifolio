@@ -126,7 +126,7 @@ A análise mostra uma **tendência de crescimento da receita ao longo dos meses*
 
 Foi criado um dashboard no Google Sheets para consolidar as principais métricas de vendas.
 
-![Renda por mês](https://github.com/Vinicius-Batista-Ribas/My-portifolio/blob/main/portifolio/coffe_shop_sales/images/Renda_mes.png?raw=true)
+![Renda por mês](https://github.com/Vinicius-Batista-Ribas/My-portifolio/blob/main/portifolio/coffe_shop_sales/images/dashboard.png?raw=true)
 
 🔗 **Planilha utilizada na análise:**  
 https://docs.google.com/spreadsheets/d/1E2PLPNRFCvTyCOySs4O7YP-Lphbt8oh9wsW-Rm5bIfU/edit?usp=sharing
