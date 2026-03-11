@@ -1,35 +1,103 @@
 # Netflix Data Analysis
 
-Projeto de análise exploratória de dados do catálogo da Netflix utilizando Python.
+Projeto de análise de dados do catálogo da Netflix utilizando **Python** e **Power BI**.
 
-## Tecnologias utilizadas
+O objetivo do projeto é explorar padrões e tendências presentes no catálogo da plataforma, analisando tipos de conteúdo, gêneros, classificações indicativas e evolução do catálogo ao longo do tempo.
 
-- Python
-- Pandas
-- Matplotlib
-- Seaborn
+Este projeto demonstra **duas abordagens diferentes para análise de dados**, utilizando ferramentas amplamente usadas na área de Data Analytics.
 
-## Objetivo
+- **Python** para análise exploratória e manipulação de dados
+- **Power BI** para tratamento de dados e construção de um dashboard interativo
+
+---
+
+# Tecnologias utilizadas
+
+- Python  
+- Pandas  
+- Matplotlib  
+- Seaborn  
+- Power BI
+
+---
+
+# Objetivo da análise
 
 Explorar o catálogo da Netflix para identificar padrões relacionados a:
 
-- Tipos de conteúdo
-- Países produtores
-- Gêneros mais populares
-- Crescimento do catálogo ao longo do tempo
+- Tipos de conteúdo disponíveis
 - Distribuição de classificações indicativas
+- Gêneros mais presentes no catálogo
+- Crescimento do catálogo ao longo dos anos
+- Relação entre país de produção e quantidade de conteúdos
 
-## Principais análises
+---
 
-✔ Filmes vs séries  
-✔ Países com mais produções  
-✔ Gêneros mais comuns  
-✔ Conteúdos adicionados por ano  
-✔ Distribuição de ratings
+# Abordagens utilizadas
 
-## Estrutura do projeto
-- data/
-- notebooks/
-- images/
+O projeto utiliza **duas abordagens diferentes para análise do mesmo dataset**, demonstrando diferentes fluxos de trabalho utilizados por analistas de dados.
 
-README.md
+## Análise com Python
+
+No notebook em Python foi realizada uma **Análise Exploratória de Dados (EDA)**, incluindo:
+
+- Limpeza e tratamento de dados
+- Tratamento de valores nulos
+- Manipulação de colunas com múltiplos valores
+- Criação de colunas auxiliares
+- Visualização de dados com gráficos
+
+O notebook contém comentários explicativos que descrevem cada etapa da análise.
+
+---
+
+## Análise com Power BI
+
+No Power BI foi realizado um segundo fluxo de tratamento e análise de dados utilizando **Power Query** e ferramentas de visualização.
+
+Etapas realizadas:
+
+- Tratamento de valores faltantes
+- Substituição de dados vazios por *Unknown*
+- Remoção de linhas em branco
+- Separação das colunas **Country** e **Genres** em múltiplas linhas
+- Preparação dos dados para análise visual
+
+Após o tratamento, foi construído um **dashboard interativo** para facilitar a exploração dos dados.
+
+---
+
+# Dashboard
+
+O dashboard desenvolvido permite visualizar rapidamente padrões presentes no catálogo da Netflix.
+
+![Renda por mês](https://github.com/Vinicius-Batista-Ribas/My-portifolio/blob/main/portifolio/coffe_shop_sales/images/dashboard.png?raw=true)
+
+Principais visualizações:
+
+- **Filmes vs Séries**  
+- **Distribuição de Ratings**  
+- **Top 10 gêneros mais comuns**  
+- **Quantidade de conteúdos adicionados por ano**  
+- **Quantidade total de títulos**  
+- **Filtro interativo por país**
+
+Essas visualizações permitem entender como o catálogo evoluiu ao longo do tempo e quais características predominam na plataforma.
+
+---
+
+# Estrutura do projeto
+
+**data/**  
+Dataset utilizado na análise.
+
+**notebooks/**  
+Notebook contendo a análise exploratória em Python.
+
+**images/**  
+Imagens utilizadas no README e no projeto.
+
+**powerbi/**  
+Arquivo do dashboard desenvolvido no Power BI.
+
+---
