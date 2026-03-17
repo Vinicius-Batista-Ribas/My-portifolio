@@ -504,8 +504,16 @@ section {
 
 .project-list {
   display: flex;
+  margin-top: 60px;
   flex-direction: column;
   gap: 40px;
+}
+
+.project-section-title {
+  margin-bottom: 30px;
+  font-size: 26px;
+  font-weight: 600;
+  color: #272829;
 }
 
 .project-item {
