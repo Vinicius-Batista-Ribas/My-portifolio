@@ -361,6 +361,14 @@ section {
   line-height: 1.6;
   margin-bottom: 10px;
 }
+.tech-list2 {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 10px;
+  padding: 0;
+}
 
 .tech-list {
   list-style: none;
@@ -443,5 +451,7 @@ section {
   .tech-list {
     justify-content: center;
   }
-
+  .tech-list2 {
+    justify-content: center;
+  }
 }
