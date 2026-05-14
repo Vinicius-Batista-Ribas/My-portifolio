@@ -1,548 +1,780 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vinícius Batista Ribas | Analista de Dados</title>
 
-  <title>Vinícius Batista Ribas | Analista de Dados</title>
+    <!-- SEO -->
+    <meta name="description" content="Portfólio de Vinícius Batista Ribas, Analista de Dados com experiência em Python, SQL, Power BI, Excel, Machine Learning e Business Intelligence." />
 
-  <!-- SEO -->
-  <meta name="description"
-    content="Portfólio de Vinícius Batista Ribas, desenvolvedor backend com foco em Golang, APIs REST, Docker e Kubernetes." />
-  <meta name="keywords" content="Backend, Golang, APIs, Docker, Kubernetes, Cloud, Developer" />
-  <meta name="author" content="Vinícius Batista Ribas" />
+    <meta  name="keywords" content="Data Analyst, Power BI, Python, SQL, Excel, Business Intelligence, Machine Learning, Analytics" />
+    <meta name="author" content="Vinícius Batista Ribas" />
 
-  <link rel="icon" href="assets/img/game.png" />
+    <link rel="icon" href="assets/img/game.png" />
 
-  <!-- Bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
 
-  <!-- Icons & CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
-  <link href="assets/css/style.css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
-</head>
+    <!-- Icons & CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
+    <link href="assets/css/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+  </head>
 
-<body>
+  <body>
+    <!-- Mobile Nav -->
+    <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
 
-  <!-- Mobile Nav -->
-  <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
+    <!-- Header -->
+    <header id="header">
+      <div class="d-flex flex-column">
+        <aside class="profile">
+          <img
+            src="assets/img/profile/profile.jpg"
+            alt="Foto de Vinícius Batista Ribas"
+            class="img-fluid rounded-circle"
+            loading="lazy"
+          />
 
-  <!-- Header -->
-  <header id="header">
-    <div class="d-flex flex-column">
-      <aside class="profile">
-        <img src="assets/img/profile/profile.jpg" alt="Foto de Vinícius Batista Ribas" class="img-fluid rounded-circle"
-          loading="lazy" />
+          <h1 class="text-light">
+            <a href="index.html">Vinícius Batista Ribas</a>
+          </h1>
 
-        <h1 class="text-light">
-          <a href="index.html">Vinícius Batista Ribas</a>
-        </h1>
+          <p class="text-center text-light">Analista/Cientista de dados</p>
+        </aside>
 
-        <p class="text-center text-light">Analista de Dados</p>
+        <nav id="navbar" class="nav-menu navbar">
+          <ul>
+            <li><a href="#hero" class="bi bi-house"> Home</a></li>
+            <li><a href="#about" class="bi bi-person-circle">Sobre</a></li>
+            <li>
+              <a href="#resume" class="bi bi-file-earmark-text">Resumo</a>
+            </li>
+            <li><a href="#portfolio" class="bi bi-images">Projetos</a></li>
+            <li><a href="#contact" class="bi bi-envelope">Contato</a></li>
+            <!-- <li><a href="assets/Vinicius-batista-ribas.pdf" class="bi bi-file-arrow-down" download>Currículo</a></li> -->
+          </ul>
+        </nav>
+      </div>
+    </header>
 
-        <div class="social-links mt-3 text-center">
-          <a href="mailto:vinicius_batista@gec.inatel.br" aria-label="Email"><i class="bi bi-envelope"></i></a>
-          <a href="https://github.com/Vinicius-Batista-Ribas" target="_blank" aria-label="GitHub"><i
-              class="bi bi-github"></i></a>
-          <a href="https://www.linkedin.com/in/vinícius-batista-ribas" target="_blank" aria-label="LinkedIn"><i
-              class="bi bi-linkedin"></i></a>
-        </div>
-      </aside>
-
-      <nav id="navbar" class="nav-menu navbar">
-        <ul>
-          <li><a href="#hero" class="bi bi-house"> Home</a></li>
-          <li><a href="#about" class="bi bi-person-circle">Sobre</a></li>
-          <li><a href="#resume" class="bi bi-file-earmark-text">Resumo</a></li>
-          <li><a href="#portfolio" class="bi bi-images">Projetos</a></li>
-          <li><a href="#contact" class="bi bi-envelope">Contato</a></li>
-          <!-- <li><a href="assets/Vinicius-batista-ribas.pdf" class="bi bi-file-arrow-down" download>Currículo</a></li> -->
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <!-- Hero -->
-  <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
-    <div class="hero-container text-center">
-      <h1>Vinícius Batista Ribas</h1>
-      <p>Analista de Dados • Python • SQL • Power BI • Excel</p>
-    </div>
-  </section>
-
-  <main id="main">
-
-    <!-- About -->
-    <section id="about" class="about">
-      <div class="container">
-        <div class="section-title">
-          <h2>Sobre mim</h2>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-4 d-flex align-items-center justify-content-center">
-            <img src="assets/img/profile/profile-2.jpg" class="img-fluid profile-img" alt="Foto profissional"
-              loading="lazy" />
-          </div>
-
-          <div class="col-lg-8 pt-4 content">
-            <h3>Analista de Dados</h3>
-            <p>
-              Profissional formado em Engenharia da Computação, com foco em análise e interpretação de dados para apoio
-              à tomada de decisão.
-              <br><br>
-
-              Possui experiência prática em manipulação, organização e análise de dados, além do
-              desenvolvimento de consultas SQL, construção de dashboards e realização de análises exploratórias (EDA)
-              utilizando ferramentas como Excel, Power BI e Python.
-              <br><br>
-
-              Vivência com bancos de dados relacionais e NoSQL, incluindo tratamento, estruturação e organização de
-              dados para análise. Possui também base em programação e boas práticas de desenvolvimento, contribuindo
-              para automação de processos, organização de dados e reprodutibilidade das análises.
-              <br><br>
-
-              Mantém interesse contínuo em análise de dados, visualização de indicadores (KPIs) e geração de insights,
-              buscando transformar dados em informações relevantes para apoiar decisões estratégicas e melhoria de
-              processos.
-            </p>
-
-          </div>
-        </div>
+    <!-- Hero -->
+    <section
+      id="hero"
+      class="d-flex flex-column justify-content-center align-items-center"
+    >
+      <div class="hero-container text-center">
+        <h1>Vinícius Batista Ribas</h1>
+        <p>Analista de Dados • Python • SQL • Power BI • Excel</p>
       </div>
     </section>
 
-    <!-- Resume -->
-    <section id="resume" class="resume">
-      <div class="container">
-        <div class="row">
-
-          <div class="col-lg-6">
-            <h3 class="resume-title">Formação</h3>
-            <article class="resume-item">
-              <h4>Engenharia da Computação</h4>
-              <h6>Conclusão: Dezembro de 2024</h6>
-              <p><em>Instituto Nascional de Telecomunicções</em></p>
-            </article>
-
-            <h3 class="resume-title">Experiência</h3>
-            <article class="resume-item">
-              <h4>Estagiário Backend</h4>
-              <h5>2022 – 2023</h5>
-              <p><em>Sensedia • Campinas - SP</em></p>
-              <ul>
-                <li>Desenvolvimento de microsserviços em Golang utilizando Docker e Kubernetes.</li>
-                <li>Criação e manutenção de APIs REST com versionamento e validações.</li>
-                <li>Implementação de testes automatizados (~80% de cobertura).</li>
-                <li>Integração contínua e entrega automatizada via CI/CD.</li>
-              </ul>
-            </article>
+    <main id="main">
+      <!-- About -->
+      <section id="about" class="about">
+        <div class="container">
+          <div class="section-title">
+            <h2>Sobre mim</h2>
           </div>
 
-          <div class="col-lg-6">
-            <article class="resume-item">
+          <div class="row">
+            <div
+              class="col-lg-4 d-flex align-items-center justify-content-center"
+            >
+              <img
+                src="assets/img/profile/profile-2.jpg"
+                class="img-fluid profile-img"
+                alt="Foto profissional"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="col-lg-8 pt-4 content">
+              <h3>Analista/Cientista de dados</h3>
+              <p>
+                Engenheiro da Computação com foco em Análise de Dados,
+                Business Intelligence (BI) e tomada de decisão orientada por dados.
+
+                <br /><br />
+
+                Possuo experiência prática em coleta, tratamento, limpeza e análise de dados,
+                além do desenvolvimento de consultas SQL, dashboards interativos e análises exploratórias (EDA).
+
+                <br /><br />
+
+                Atuo com bancos de dados relacionais e NoSQL, pipelines de dados utilizando Python (Pandas)
+                e Power Query, sempre buscando transformar dados em insights estratégicos para otimização
+                de processos e apoio à tomada de decisão.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Resume -->
+      
+      <section id="resume" class="resume">
+        <div class="container">
+          <div class="section-title">
+            <h2>Resumo Profissional</h2>
+          </div>
+          <div class="row">
+            <div class="col-lg-6">
+
+
+              <h3 class="resume-title">Experiência profissional</h3>
+              <article class="resume-item">
+                <h4>Professor</h4>
+                <h5>2026 – Atual</h5>
+                <p><em>Colégio Plano • São Francisco - MG</em></p>
+
+                <ul>
+                  <li>Lecionamento e acompanhamento do desenvolvimento dos alunos no curso Técnico em Informática.</li>
+                  <li>Planejamento de aulas, aplicação e correção de provas e atividades.</li>
+                  <li>Ministração de aulas relacionadas à Ética na Tecnologia da Informação e apoio nas demais disciplinas.</li>
+                  <li>Apoio na utilização de tecnologias e ferramentas digitais aplicadas ao ensino.</li>
+                </ul>
+              </article>
+              
+              <article class="resume-item">
+                <h4>Auxiliar</h4>
+                <h5>2025 – Atual</h5>
+                <p><em>Escritório de Engenharia Familiar • São Francisco - MG</em></p>
+
+                <ul>
+                  <li>Desenvolvimento de projetos arquitetônicos, desmembramentos e remembramentos.</li>
+                  <li>Apoio na criação e organização de documentação técnica e regulatória.</li>
+                  <li>Auxílio em processos administrativos e acompanhamento de documentos em cartórios e prefeituras.</li>
+                </ul>
+              </article>
+
+              <article class="resume-item">
+                <h4>Estagiário Backend</h4>
+                <h5>2022 – 2023</h5>
+                <p><em>Sensedia • Campinas - SP</em></p>
+
+                <ul>
+                  <li>Desenvolvimento de microsserviços em Golang utilizando Docker e Kubernetes.</li>
+                  <li>Criação e manutenção de APIs REST, incluindo versionamento e validações.</li>
+                  <li>Implementação de testes automatizados com cobertura mínima de 80%.</li>
+                  <li>Apoio nos processos de integração e entrega contínua (CI/CD).</li>
+                  <li>Participação em cerimônias ágeis utilizando Scrum, incluindo dailies, plannings, reviews e retrospectivas.</li>
+                </ul>
+              </article>
+            </div>
+
+            <div class="col-lg-6">
+              <h3 class="resume-title">Formação Acadêmica</h3>
+              <article class="resume-item">
+                <div class="mb-4">
+                  <h5>
+                    Pós-Graduação em Ciência de Dados e Analytics Avançados
+                  </h5>
+                  <h6>Conclusão prevista: Fev/2027</h6>
+                  <p>
+                    <em>Universidade Pitágoras Unopar Anhanguera (UNOPAR)</em>
+                  </p>
+                </div>
+
+                <div class="mb-4">
+                  <h5>Bacharelado em Engenharia da Computação</h5>
+                  <h6>Conclusão: 2024</h6>
+                  <p>
+                    <em>Instituto Nacional de Telecomunicações (INATEL)</em>
+                  </p>
+                </div>
+              </article>
+
               <h3 class="resume-title">Habilidades Técnicas</h3>
-              <ul>
-                <li><strong>Análise de Dados:</strong> Python, Excel, Power BI, Análise Exploratória de Dados (EDA),
-                  criação de dashboards e indicadores (KPIs)</li>
-                <li><strong>Manipulação e Processamento de Dados:</strong> Pandas, tratamento e limpeza de dados,
-                  transformação de dados e preparação para análise</li>
-                <li><strong>Bancos de Dados:</strong> PostgreSQL, MongoDB, consultas SQL e organização de dados</li>
-                <li><strong>Ferramentas e Ambiente:</strong> Git, Linux</li>
+              <article class="resume-item">
+                <ul>
+                  <li>
+                    <strong>Análise de Dados & Business Intelligence:</strong>
+                    Python para análise de dados (Pandas, NumPy), limpeza,
+                    transformação e exploração de dados (EDA), geração de
+                    insights para apoio à tomada de decisão e aplicação de
+                    modelos básicos de Machine Learning.
+                  </li>
 
-              </ul>
-            </article>
+                  <li>
+                    <strong>Visualização de Dados:</strong>
+                    Desenvolvimento de dashboards interativos no Power BI,
+                    criação e monitoramento de KPIs, modelagem de dados,
+                    construção de métricas com DAX e storytelling com dados.
+                  </li>
 
+                  <li>
+                    <strong>Excel Avançado:</strong>
+                    Tabelas dinâmicas, fórmulas complexas, automações,
+                    dashboards e controle de indicadores (KPIs).
+                  </li>
 
-            <article class="resume-item">
-              <h3 class="resume-title ">Diferenciais</h3>
-              <ul>
-                <li>Capacidade de analisar e interpretar dados para geração de insights e apoio à tomada de decisão</li>
-                <li>Experiência com Python aplicado à análise e manipulação de dados, utilizando bibliotecas como Pandas
-                </li>
-                <li>Experiência com consultas SQL e organização de dados em bancos relacionais</li>
-                <li>Base sólida em engenharia de software, contribuindo para organização, automação e reprodutibilidade
-                  das análises</li>
-              </ul>
-            </article>
+                  <li>
+                    <strong>Bancos de Dados:</strong>
+                    SQL avançado (queries complexas, joins, CTEs e otimização de
+                    performance), PostgreSQL e MongoDB.
+                  </li>
+
+                  <li>
+                    <strong>Engenharia & Processamento de Dados:</strong>
+                    Desenvolvimento de pipelines ETL/ELT, limpeza, transformação
+                    e padronização de dados, Power Query e manipulação de
+                    grandes volumes de dados.
+                  </li>
+
+                  <li>
+                    <strong>Ferramentas e Ambiente:</strong>
+                    Git, Linux e Docker.
+                  </li>
+
+                  <li>
+                    <strong>Idiomas:</strong>
+                    Inglês Intermediário.
+                  </li>
+                </ul>
+              </article>
+
+              <h3 class="resume-title">Diferenciais</h3>
+              <article class="resume-item">
+                <ul>
+                  <li>
+                    Capacidade analítica para interpretação de dados e geração
+                    de insights estratégicos.
+                  </li>
+                  <li>
+                    Experiência com Python aplicado à análise, manipulação e
+                    automação de dados.
+                  </li>
+                  <li>
+                    Vivência no desenvolvimento de dashboards e acompanhamento
+                    de indicadores de desempenho (KPIs).
+                  </li>
+                  <li>
+                    Conhecimento em modelagem, organização e otimização de dados
+                    relacionais e NoSQL.
+                  </li>
+                  <li>
+                    Base sólida em engenharia de software, contribuindo para
+                    automação, organização e reprodutibilidade das análises.
+                  </li>
+                </ul>
+              </article>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Portfolio -->
-    <section id="portfolio" class="portfolio section-bg">
-      <div class="container">
+      <!-- Portfolio -->
+      <section id="portfolio" class="portfolio section-bg">
+        <div class="container">
+          <div class="section-title">
+            <h2>Projetos de Análise de Dados</h2>
+            <p>
+              Alguns dashboards e análises desenvolvidas utilizando ferramentas
+              de Data Analytics.
+            </p>
+          </div>
 
-        <div class="section-title">
-          <h2>Projetos de Análise de Dados</h2>
-          <p>Alguns dashboards e análises desenvolvidas utilizando ferramentas de Data Analytics.</p>
+          <div class="project-list">
+            <h3 class="project-section-title">Projetos Principais</h3>
+           
+<!-- Projeto 1 -->
+            <div class="project-item">
+              <div class="project-image">
+                <a
+                  href="https://github.com/Vinicius-Batista-Ribas/An-lise-de-Churn-de-Clientes-Banc-rios/blob/main/IMG/DASHBOARD.png?raw=true"
+                  class="portfolio-lightbox d-block"
+                  data-gallery="devopsGallery"
+                >
+                  <img
+                    src="https://github.com/Vinicius-Batista-Ribas/An-lise-de-Churn-de-Clientes-Banc-rios/blob/main/IMG/DASHBOARD.png?raw=true"
+                    class="img-fluid rounded mx-auto d-block certificados-img"
+                    alt="Bank Customer Churn"
+                  />
+                </a>
+              </div>
+
+              <div class="project-info">
+                <h4>Análise de Churn de Clientes Bancários</h4>
+
+                <p>
+                  Projeto de análise de churn em uma instituição bancária utilizando Python
+                  e técnicas de análise exploratória de dados (EDA).
+
+                  <br /><br />
+
+                  Foram identificados padrões relacionados ao perfil e comportamento dos clientes,
+                  além da criação de um score de risco para segmentar a probabilidade de evasão.
+
+                  <br /><br />
+
+                  Os insights obtidos auxiliam na tomada de decisão e no desenvolvimento de estratégias
+                  mais eficazes de retenção de clientes.
+                </p>
+
+                <ul class="tech-list">
+                  <li>Python (Pandas, Matplotlib)</li>
+                  <li>Análise exploratória de dados (EDA)</li>
+                </ul>
+
+                <a
+                  href="https://github.com/Vinicius-Batista-Ribas/An-lise-de-Churn-de-Clientes-Banc-rios/blob/main/readme.md"
+                  class="project-link"
+                  target="_blank"
+                  >Ver Projeto</a
+                >
+              </div>
+            </div>
+
+            <!-- Projeto 2 -->
+            <div class="project-item">
+              <div class="project-image">
+                <a
+                  href="https://github.com/Vinicius-Batista-Ribas/coffe_shop_sales/raw/main/images/dashboard.png?raw=true"
+                  class="portfolio-lightbox d-block"
+                  data-gallery="devopsGallery"
+                >
+                  <img
+                    src="https://github.com/Vinicius-Batista-Ribas/coffe_shop_sales/raw/main/images/dashboard.png?raw=true"
+                    class="img-fluid rounded mx-auto d-block certificados-img"
+                    alt="coffe_shop_sales"
+                  />
+                </a>
+              </div>
+
+              <div class="project-info">
+                <h4>Dashboard de Vendas — Coffee Shop</h4>
+
+              <p>
+                Projeto de análise exploratória de dados utilizando informações de vendas de uma cafeteria fictícia.
+
+                <br /><br />
+
+                A análise identificou que o produto mais vendido não é o mais lucrativo,
+                evidenciando oportunidades de otimização no mix de produtos e nas estratégias de precificação.
+
+                <br /><br />
+
+                Também foi observado que o maior volume de vendas ocorre entre 9h e 10h da manhã,
+                permitindo melhor direcionamento operacional e alocação de funcionários.
+              </p>
+
+                <ul class="tech-list">
+                  <li>Google Sheets</li>
+                  <li>Análise exploratória de dados (EDA)</li>
+                  <li>Visualização de dados</li>
+                </ul>
+
+                <a
+                  href="https://github.com/Vinicius-Batista-Ribas/coffe_shop_sales/blob/main/README.md"
+                  class="project-link"
+                  target="_blank"
+                  >Ver Projeto</a
+                >
+              </div>
+            </div>
+
+            <!-- Projeto 3 -->
+            <div class="project-item">
+              <div class="project-image">
+                <a
+                  href="https://github.com/Vinicius-Batista-Ribas/Netflix_Data/blob/main/imgs/dashboardPowebi.png?raw=true"
+                  class="portfolio-lightbox d-block"
+                  data-gallery="devopsGallery"
+                >
+                  <img
+                    src="https://github.com/Vinicius-Batista-Ribas/Netflix_Data/blob/main/imgs/dashboardPowebi.png?raw=true"
+                    class="img-fluid rounded mx-auto d-block certificados-img"
+                    alt="Netflix-data-analysis"
+                  />
+                </a>
+              </div>
+
+              <div class="project-info">
+                <h4>Análise de Dados da Netflix (End-to-End)</h4>
+
+                <p>
+                  Projeto de análise do catálogo da Netflix utilizando Python para tratamento e exploração dos dados (EDA)
+                  e Power BI para construção de dashboards interativos.
+
+                  <br /><br />
+
+                  A análise revelou predominância de filmes em relação a séries,
+                  com destaque para gêneros como filmes internacionais, comédia e drama.
+
+                  <br /><br />
+
+                  Também foi identificada maior incidência de classificação indicativa TV-MA,
+                  indicando forte direcionamento para o público adulto.
+
+                  <br /><br />
+
+                  Os insights podem apoiar decisões estratégicas relacionadas à produção e aquisição de conteúdo.
+                </p>
+
+                <ul class="tech-list">
+                  <li>Python (Pandas, Matplotlib, Seaborn)</li>
+                  <li>Análise exploratória de dados (EDA)</li>
+                  <li>Power BI</li>
+                  <li>Power Query</li>
+                </ul>
+
+                <a
+                  href="https://github.com/Vinicius-Batista-Ribas/Netflix_Data/blob/main/readme.md"
+                  class="project-link"
+                  target="_blank"
+                >
+                  Ver Projeto
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-list">
+            <h3 class="project-section-title">Projetos Secundários</h3>
+
+            <!-- Projeto 1 -->
+            <div class="project-item">
+              <div class="project-image">
+                <a
+                  href="assets\img\projetos\data_cleaning.png"
+                  class="portfolio-lightbox d-block"
+                  data-gallery="devopsGallery"
+                >
+                  <img
+                    src="assets\img\projetos\data_cleaning.png"
+                    class="img-fluid rounded mx-auto d-block certificados-img"
+                    alt="Data Cleaning Pipeline"
+                  />
+                </a>
+              </div>
+
+              <div class="project-info">
+                <h4>Data Cleaning Pipeline (Python)</h4>
+
+                <p>
+                  Pipeline genérica e reutilizável para tratamento, padronização
+                  e preparação de dados em Python, projetada para adaptação a
+                  diferentes datasets e cenários analíticos.
+                </p>
+
+                <ul class="tech-list2">
+                  <li>
+                    🧹 Tratamento de valores nulos, inconsistências e
+                    duplicidades com foco em qualidade dos dados
+                  </li>
+                  <li>
+                    🔄 Padronização de categorias, formatos e tipos de dados
+                  </li>
+                  <li>
+                    ⚙️ Criação de variáveis derivadas (feature engineering) para
+                    enriquecimento analítico
+                  </li>
+                  <li>
+                    📦 Estrutura modular e adaptável, permitindo reutilização em
+                    múltiplos contextos
+                  </li>
+                </ul>
+
+                <ul class="tech-list">
+                  <li>Python</li>
+                  <li>Pandas</li>
+                  <li>NumPy</li>
+                </ul>
+
+                <a
+                  href="https://github.com/Vinicius-Batista-Ribas/Data_Cleaning_Pipeline/blob/main/cleaning_database.py"
+                  class="project-link"
+                  target="_blank"
+                  >Ver Projeto</a
+                >
+              </div>
+            </div>
+
+            <!-- Projeto 2 -->
+            <div class="project-item">
+              <div class="project-image">
+                <a
+                  href="assets/img/projetos/cmr.png"
+                  class="portfolio-lightbox d-block"
+                  data-gallery="devopsGallery"
+                >
+                  <img
+                    src="assets/img/projetos/cmr.png"
+                    class="img-fluid rounded mx-auto d-block certificados-img"
+                    alt="CRM Dashboard"
+                  />
+                </a>
+              </div>
+
+              <div class="project-info">
+                <h4>CRM Sales Analysis</h4>
+
+                <p>
+                  Análise exploratória e estratégica de dados de CRM com foco na
+                  identificação de oportunidades comerciais, otimização do funil
+                  de vendas e geração de insights orientados a dados para
+                  suporte à tomada de decisão.
+                </p>
+
+                <ul class="tech-list2">
+                  <li>
+                    🔍 Análise do funil de vendas (Won, Lost, Engaging,
+                    Prospecting), identificando gargalos e oportunidades de
+                    conversão
+                  </li>
+                  <li>
+                    📈 Geração de insights acionáveis para melhoria da
+                    eficiência comercial
+                  </li>
+                  <li>
+                    💰 Comparação entre receita realizada e potencial,
+                    evidenciando gaps e oportunidades de crescimento
+                  </li>
+                  <li>
+                    📊 Avaliação de desempenho por vendedor e região, destacando
+                    variações de performance
+                  </li>
+                </ul>
+
+                <ul class="tech-list">
+                  <li>SQL</li>
+                  <li>Google Sheets</li>
+                  <li>Data Analysis</li>
+                </ul>
+
+                <a
+                  href="https://github.com/Vinicius-Batista-Ribas/CMR-SALES-OPORTUNITES"
+                  class="project-link"
+                  target="_blank"
+                  >Ver Projeto</a
+                >
+              </div>
+            </div>
+          </div>
         </div>
+      </section>
 
-        <div class="project-list">
-          <h3 class="project-section-title">Projetos Principais</h3>
-          <!-- Projeto 1 -->
-
-          <div class="project-item">
-
-            <div class="project-image">
-              <a href="https://github.com/Vinicius-Batista-Ribas/An-lise-de-Churn-de-Clientes-Banc-rios/blob/main/IMG/DASHBOARD.png?raw=true" class="portfolio-lightbox d-block"
-              data-gallery="devopsGallery">
-                <img src="https://github.com/Vinicius-Batista-Ribas/An-lise-de-Churn-de-Clientes-Banc-rios/blob/main/IMG/DASHBOARD.png?raw=true" 
-                  class="img-fluid rounded mx-auto d-block certificados-img" alt="Bank Customer Churn">
-              </a>    
-            </div>
-
-            <div class="project-info">
-              <h4>Bank customer churn</h4>
-
-              <p>
-                Este projeto analisa os fatores que influenciam o churn de clientes em uma instituição bancária,
-                utilizando Python e técnicas de análise exploratória de dados (EDA).
-
-                A partir da análise, foram identificados padrões relevantes relacionados ao perfil e comportamento dos
-                clientes, além do desenvolvimento de um score de risco para segmentar a probabilidade de evasão.
-
-                Os insights obtidos auxiliam na tomada de decisão, permitindo a criação de estratégias mais eficazes de
-                retenção de clientes.
-              </p>
-
-              <ul class="tech-list">
-                <li>Python (Pandas, Matplotlib)</li>
-                <li>Análise exploratória de dados (EDA)</li>
-              </ul>
-
-              <a href="https://github.com/Vinicius-Batista-Ribas/An-lise-de-Churn-de-Clientes-Banc-rios/blob/main/readme.md"
-                class="project-link" target="_blank">Ver Projeto</a>
-            </div>
-
+      <!-- ======= Certificados ======= -->
+      <section id="certificados" class="section-bg">
+        <div class="container">
+          <div class="section-title">
+            <h2>Certificados</h2>
+            <p class="text-center mt-2">
+              Formação complementar com foco em Análise de Dados, Business
+              Intelligence e Tecnologia.
+              <br>
+              Clique nos certificados para ampliar.
+            </p>
           </div>
 
-          <!-- Projeto 2 -->
-          <div class="project-item">
+          <!-- Data Analysis & BI -->
+          <h3 class="certificados-subtitle">
+            📊 Análise de Dados & Business Intelligence
+          </h3>
 
-            <div class="project-image">
-              <a href="https://github.com/Vinicius-Batista-Ribas/coffe_shop_sales/raw/main/images/dashboard.png?raw=true" class="portfolio-lightbox d-block"
-              data-gallery="devopsGallery">
-                <img src="https://github.com/Vinicius-Batista-Ribas/coffe_shop_sales/raw/main/images/dashboard.png?raw=true" 
-                  class="img-fluid rounded mx-auto d-block certificados-img" alt="coffe_shop_sales">
-              </a>    
-            </div>
-
-            <div class="project-info">
-              <h4>Coffe Shop - Dashboard de Vendas</h4>
-
-              <p>
-                Projeto de análise exploratória de dados (EDA) utilizando dados de vendas de uma cafeteria fictícia.
-
-                A análise identificou que o produto mais vendido não é o que gera maior lucro, indicando oportunidades
-                de otimização no mix de produtos e estratégias de precificação.
-
-                Além disso, foi observado que o maior volume de vendas ocorre entre 9h e 10h da manhã, permitindo
-                direcionar melhor a alocação de funcionários e reduzir possíveis gargalos no atendimento.
-
-                Esses insights podem contribuir para aumento da eficiência operacional e melhoria na rentabilidade do
-                negócio.
-              </p>
-
-              <ul class="tech-list">
-                <li>Google Sheets</li>
-                <li>Análise exploratória de dados (EDA)</li>
-                <li>Visualização de dados</li>
-              </ul>
-
-              <a href="https://github.com/Vinicius-Batista-Ribas/coffe_shop_sales/blob/main/README.md"
-                class="project-link" target="_blank">Ver Projeto</a>
-            </div>
-
-          </div>
-
-
-          <!-- Projeto 3 -->
-          <div class="project-item">
-
-
-            <div class="project-image">
-              <a href="https://github.com/Vinicius-Batista-Ribas/Netflix_Data/blob/main/imgs/dashboardPowebi.png?raw=true" class="portfolio-lightbox d-block"
-              data-gallery="devopsGallery">
-                <img src="https://github.com/Vinicius-Batista-Ribas/Netflix_Data/blob/main/imgs/dashboardPowebi.png?raw=true" 
-                  class="img-fluid rounded mx-auto d-block certificados-img" alt="Netflix-data-analysis">
-              </a>    
-            </div>
-            
-            <div class="project-info">
-              <h4>Netflix Data Analysis (End-to-End)</h4>
-
-              <p>
-                Projeto de análise do catálogo da Netflix utilizando Python para tratamento e exploração dos dados (EDA)
-                e Power BI para construção de dashboards interativos voltados à tomada de decisão.
-
-                <br><br>
-
-                A análise revelou predominância de filmes em relação a séries, com destaque para gêneros como filmes
-                internacionais, comédia e drama. Também foi observada maior incidência de classificação indicativa
-                TV-MA, indicando um foco em conteúdo voltado ao público adulto.
-
-                Esses insights podem apoiar decisões estratégicas, como o direcionamento de investimentos em novos
-                conteúdos e desenvolvimento de programações alinhadas ao perfil predominante da plataforma.
-              </p>
-
-              <ul class="tech-list">
-                <li>Python (Pandas, Matplotlib, Seaborn) </li>
-                <li>Análise exploratória de dados (EDA)</li>
-                <li>Power BI</li>
-                <li>Power Query</li>
-              </ul>
-
-              <a href="https://github.com/Vinicius-Batista-Ribas/Netflix_Data/blob/main/readme.md" class="project-link"
-                target="_blank">
-                Ver Projeto
+          <div class="row certificados-container">
+            <div class="col-lg-4 col-md-6 certificados-item">
+              <a
+                href="assets/img/certificados/Analise_de_dados.png"
+                class="portfolio-lightbox d-block"
+                data-gallery="certificadosGallery"
+                title="Análise de Dados"
+              >
+                <img
+                  src="assets/img/certificados/Analise_de_dados.png"
+                  class="img-fluid rounded mx-auto d-block certificados-img"
+                  alt="Certificado de Análise de Dados"
+                />
               </a>
             </div>
 
+            <div class="col-lg-4 col-md-6 certificados-item">
+              <a
+                href="assets/img/certificados/Storytelling.png"
+                class="portfolio-lightbox d-block"
+                data-gallery="certificadosGallery"
+                title="Storytelling com Dados"
+              >
+                <img
+                  src="assets/img/certificados/Storytelling.png"
+                  class="img-fluid rounded mx-auto d-block certificados-img"
+                  alt="Certificado de Storytelling com Dados"
+                />
+              </a>
+            </div>
+
+            <div class="col-lg-4 col-md-6 certificados-item">
+              <a
+                href="assets/img/certificados/Power_BI.jpg"
+                class="portfolio-lightbox d-block"
+                data-gallery="certificadosGallery"
+                title="Power BI"
+              >
+                <img
+                  src="assets/img/certificados/Power_BI.jpg"
+                  class="img-fluid rounded mx-auto d-block certificados-img"
+                  alt="Certificado de Power BI"
+                />
+              </a>
+            </div>
+
+            <div class="col-lg-4 col-md-6 certificados-item">
+              <a
+                href="assets/img/certificados/Excel.png"
+                class="portfolio-lightbox d-block"
+                data-gallery="certificadosGallery"
+                title="Excel Avançado"
+              >
+                <img
+                  src="assets/img/certificados/Excel.png"
+                  class="img-fluid rounded mx-auto d-block certificados-img"
+                  alt="Certificado de Excel Avançado"
+                />
+              </a>
+            </div>
           </div>
 
+          <!-- Programação & Banco de Dados -->
+          <h3 class="certificados-subtitle">🐍 Programação & Banco de Dados</h3>
 
+          <div class="row certificados-container">
+            <div class="col-lg-4 col-md-6 certificados-item">
+              <a
+                href="assets/img/certificados/consultas_SQL.png"
+                class="portfolio-lightbox d-block"
+                data-gallery="certificadosGallery"
+                title="Consultas SQL"
+              >
+                <img
+                  src="assets/img/certificados/consultas_SQL.png"
+                  class="img-fluid rounded mx-auto d-block certificados-img"
+                  alt="Certificado de Consultas SQL"
+                />
+              </a>
+            </div>
 
+            <div class="col-lg-4 col-md-6 certificados-item">
+              <a
+                href="assets/img/certificados/SQL_Basico.png"
+                class="portfolio-lightbox d-block"
+                data-gallery="certificadosGallery"
+                title="SQL Básico"
+              >
+                <img
+                  src="assets/img/certificados/SQL_Basico.png"
+                  class="img-fluid rounded mx-auto d-block certificados-img"
+                  alt="Certificado de SQL Básico"
+                />
+              </a>
+            </div>
+
+            <div class="col-lg-4 col-md-6 certificados-item">
+              <a
+                href="assets/img/certificados/analise_dados_sql.png"
+                class="portfolio-lightbox d-block"
+                data-gallery="certificadosGallery"
+                title="Análise de Dados com SQL"
+              >
+                <img
+                  src="assets/img/certificados/analise_dados_sql.png"
+                  class="img-fluid rounded mx-auto d-block certificados-img"
+                  alt="Certificado de Análise de Dados com SQL"
+                />
+              </a>
+            </div>
+
+            <div class="col-lg-4 col-md-6 certificados-item">
+              <a
+                href="assets/img/certificados/Python_Dados_I.png"
+                class="portfolio-lightbox d-block"
+                data-gallery="certificadosGallery"
+                title="Python para Análise de Dados"
+              >
+                <img
+                  src="assets/img/certificados/Python_Dados_I.png"
+                  class="img-fluid rounded mx-auto d-block certificados-img"
+                  alt="Certificado de Python para Análise de Dados"
+                />
+              </a>
+            </div>
+          </div>
+
+          <!-- Fundamentos & Complementares -->
+          <h3 class="certificados-subtitle">⚙️ Ferramentas & Fundamentos</h3>
+
+          <div class="row certificados-container">
+            <div class="col-lg-4 col-md-6 certificados-item">
+              <a
+                href="assets/img/certificados/GIT.png"
+                class="portfolio-lightbox d-block"
+                data-gallery="certificadosGallery"
+                title="Git & Controle de Versão"
+              >
+                <img
+                  src="assets/img/certificados/GIT.png"
+                  class="img-fluid rounded mx-auto d-block certificados-img"
+                  alt="Certificado de Git e Controle de Versão"
+                />
+              </a>
+            </div>
+
+            <div class="col-lg-4 col-md-6 certificados-item">
+              <a
+                href="assets/img/certificados/Docker.png"
+                class="portfolio-lightbox d-block"
+                data-gallery="certificadosGallery"
+                title="Docker"
+              >
+                <img
+                  src="assets/img/certificados/Docker.png"
+                  class="img-fluid rounded mx-auto d-block certificados-img"
+                  alt="Certificado de Docker"
+                />
+              </a>
+            </div>
+          </div>
         </div>
+      </section>
 
-        <div class="project-list">
-          <h3 class="project-section-title">Projetos Secundários</h3>
+      <section id="contact">
+        <div class="container">
+          <div class="section-title">
+            <h2 class="text-center">Contato</h2>
+            <p class="text-center mt-3"> Entre em contato comigo através das redes abaixo. </p>
 
-          <!-- Projeto 1 -->
-          <div class="project-item">
+            <div class="social-links text-center"> 
 
-            <div class="project-image">
-              <a href="assets\img\projetos\data_cleaning.png" class="portfolio-lightbox d-block"
-              data-gallery="devopsGallery">
-                <img src="assets\img\projetos\data_cleaning.png" 
-                  class="img-fluid rounded mx-auto d-block certificados-img" alt="Data Cleaning Pipeline">
-              </a>    
+              <a href="mailto:vinicius_batista@gec.inatel.br" aria-label="Email" > <i class="bi bi-envelope"></i> </a>
+              <a href="https://wa.me/5538988293796" target="_blank" rel="noopener" aria-label="WhatsApp"> <i class="bi bi-whatsapp"></i> </a>
+              <a href="https://www.instagram.com/vinii_ribas/" target="_blank" rel="noopener" aria-label="Instagram"> <i class="bi bi-instagram"></i> </a>
+              <a href="https://www.linkedin.com/in/vinícius-batista-ribas" target="_blank" rel="noopener" aria-label="LinkedIn"> <i class="bi bi-linkedin"></i> </a>
+              <a href="https://github.com/Vinicius-Batista-Ribas" target="_blank" aria-label="GitHub" ><i class="bi bi-github"></i> </a>
+
             </div>
-
-            <div class="project-info">
-              <h4>Data Cleaning Pipeline (Python)</h4>
-
-              <p>
-                Pipeline genérica e reutilizável para tratamento, padronização e preparação de dados em Python, projetada para adaptação a diferentes datasets e cenários analíticos.
-              </p>
-
-              <ul class="tech-list2">
-                <li>🧹 Tratamento de valores nulos, inconsistências e duplicidades com foco em qualidade dos dados</li>
-                <li>🔄 Padronização de categorias, formatos e tipos de dados</li>
-                <li>⚙️ Criação de variáveis derivadas (feature engineering) para enriquecimento analítico</li>
-                <li>📦 Estrutura modular e adaptável, permitindo reutilização em múltiplos contextos</li>
-              </ul>
-
-              <ul class="tech-list">
-                <li>Python</li>
-                <li>Pandas</li>
-                <li>NumPy</li>
-              </ul>
-
-              <a href="https://github.com/Vinicius-Batista-Ribas/Data_Cleaning_Pipeline/blob/main/cleaning_database.py"
-                class="project-link" target="_blank">Ver Projeto</a>
-            </div>
-
+            
+            
           </div>
-
-          <!-- Projeto 2 -->
-          <div class="project-item">
-
-            <div class="project-image">
-              <a href="assets/img/projetos/cmr.png" class="portfolio-lightbox d-block"
-              data-gallery="devopsGallery">
-                <img src="assets/img/projetos/cmr.png" 
-                  class="img-fluid rounded mx-auto d-block certificados-img" alt="CRM Dashboard">
-              </a>    
-            </div>
-
-            <div class="project-info">
-              <h4>CRM Sales Analysis</h4>
-
-              <p>
-                Análise exploratória e estratégica de dados de CRM com foco na identificação de oportunidades comerciais, otimização do funil de vendas e geração de insights orientados a dados para suporte à tomada de decisão.
-              </p>
-
-              <ul class="tech-list2">
-                <li>🔍 Análise do funil de vendas (Won, Lost, Engaging, Prospecting), identificando gargalos e oportunidades de conversão</li>
-                <li>📈 Geração de insights acionáveis para melhoria da eficiência comercial</li>
-                <li>💰 Comparação entre receita realizada e potencial, evidenciando gaps e oportunidades de crescimento</li>
-                <li>📊 Avaliação de desempenho por vendedor e região, destacando variações de performance</li>
-              </ul>
-
-              <ul class="tech-list">
-                <li>SQL</li>
-                <li>Google Sheets</li>
-                <li>Data Analysis</li>
-              </ul>
-
-              <a href="https://github.com/Vinicius-Batista-Ribas/CMR-SALES-OPORTUNITES"
-                class="project-link" target="_blank">Ver Projeto</a>
-            </div> 
-
-          </div>
-
-
         </div>
+      </section>
+    </main>
 
+    <!-- Footer -->
+    <footer id="footer">
+      <div class="container text-center">
+        <p>&copy; 2026 • Vinícius Batista Ribas</p>
       </div>
-    </section>
+    </footer>
 
-    <!-- ======= Certificados ======= -->
-    <section id="certificados" class="section-bg">
-      <div class="container">
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"> <i class="bi bi-arrow-up-short"></i> </a>
 
-        <div class="section-title">
-          <h2>Certificados</h2>
-          <p>Formação técnica complementar com foco em Análise de Dados.</p>
-        </div>
-
-        <!-- Análise de Dados -->
-        <h3 class="certificados-subtitle">📊 Data Analysis & BI</h3>
-        <div class="row certificados-container">
-
-          <div class="col-lg-4 col-md-6 certificados-item">
-            <a href="assets/img/certificados/Analise_de_dados.png" class="portfolio-lightbox d-block"
-              data-gallery="devopsGallery">
-              <img src="assets/img/certificados/Analise_de_dados.png"
-                class="img-fluid rounded mx-auto d-block certificados-img" alt="Certificado Redes IP">
-            </a>
-          </div>
-
-          <div class="col-lg-4 col-md-6 certificados-item">
-            <a href="assets/img/certificados/Storytelling.png" class="portfolio-lightbox d-block"
-              data-gallery="devopsGallery">
-              <img src="assets/img/certificados/Storytelling.png"
-                class="img-fluid rounded mx-auto d-block certificados-img" alt="Certificado Redes IP">
-            </a>
-          </div>
-
-          <div class="col-lg-4 col-md-6 certificados-item">
-            <a href="assets/img/certificados/Power_BI.jpg" class="portfolio-lightbox d-block"
-              data-gallery="devopsGallery">
-              <img src="assets/img/certificados/Power_BI.jpg" class="img-fluid rounded mx-auto d-block certificados-img"
-                alt="Certificado Redes IP">
-            </a>
-          </div>
-
-        </div>
-
-        <h3 class="certificados-subtitle">🐍 Programação & Banco de Dados</h3>
-        <div class="row certificados-container">
-
-          <div class="col-lg-4 col-md-6 certificados-item">
-            <a href="assets/img/certificados/consultas_SQL.png" class="portfolio-lightbox d-block"
-              data-gallery="devopsGallery">
-              <img src="assets/img/certificados/consultas_SQL.png"
-                class="img-fluid rounded mx-auto d-block certificados-img" alt="Certificado Redes IP">
-            </a>
-          </div>
-
-          <div class="col-lg-4 col-md-6 certificados-item">
-            <a href="assets/img/certificados/SQL_Basico.png" class="portfolio-lightbox d-block"
-              data-gallery="devopsGallery">
-              <img src="assets/img/certificados/SQL_Basico.png"
-                class="img-fluid rounded mx-auto d-block certificados-img" alt="Certificado Redes IP">
-            </a>
-          </div>
-
-          <div class="col-lg-4 col-md-6 certificados-item">
-            <a href="assets/img/certificados/analise_dados_sql.png" class="portfolio-lightbox d-block"
-              data-gallery="devopsGallery">
-              <img src="assets/img/certificados/analise_dados_sql.png"
-                class="img-fluid rounded mx-auto d-block certificados-img" alt="Certificado Redes IP">
-            </a>
-          </div>
-
-
-          <div class="col-lg-4 col-md-6 certificados-item">
-            <a href="assets/img/certificados/Python_Dados_I.png" class="portfolio-lightbox d-block"
-              data-gallery="devopsGallery">
-              <img src="assets/img/certificados/Python_Dados_I.png"
-                class="img-fluid rounded mx-auto d-block certificados-img" alt="Certificado Redes IP">
-            </a>
-          </div>
-
-        </div>
-
-
-                  
-        <h3 class="certificados-subtitle">⚙️ Fundamentos & Complementares</h3>
-        <div class="row certificados-container">
-
-
-
-          <div class="col-lg-4 col-md-6 certificados-item">
-            <a href="assets/img/certificados/GIT.png" class="portfolio-lightbox d-block" data-gallery="devopsGallery">
-              <img src="assets/img/certificados/GIT.png" class="img-fluid rounded mx-auto d-block certificados-img"
-                alt="Certificado Redes IP">
-            </a>
-          </div>
-
-          <div class="col-lg-4 col-md-6 certificados-item">
-            <a href="assets/img/certificados/Docker.png" class="portfolio-lightbox d-block"
-              data-gallery="devopsGallery">
-              <img src="assets/img/certificados/Docker.png" class="img-fluid rounded mx-auto d-block certificados-img"
-                alt="Certificado Redes IP">
-            </a>
-          </div>
-
-
-        </div>
-
-    </section>
-
-    <section id="contact">
-      <div class="container">
-        <div class="section-title">
-          <h2 class="text-center">Contato</h2>
-          <p class="text-center mt-3">
-            Entre em contato comigo através das redes abaixo.
-          </p>
-          <div class="social-links  text-center">
-
-            <a href="mailto:vinicius_batista@gec.inatel.br" aria-label="Email">
-              <i class="bi bi-envelope"></i>
-            </a>
-
-            <a href="https://wa.me/5538988293796" target="_blank" rel="noopener" aria-label="WhatsApp">
-              <i class="bi bi-whatsapp"></i>
-            </a>
-
-            <a href="https://www.instagram.com/vinii_ribas/" target="_blank" rel="noopener" aria-label="Instagram">
-              <i class="bi bi-instagram"></i>
-            </a>
-
-            <a href="https://www.linkedin.com/in/vinícius-batista-ribas" target="_blank" rel="noopener"
-              aria-label="LinkedIn">
-              <i class="bi bi-linkedin"></i>
-            </a>
-
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- Footer -->
-  <footer id="footer">
-    <div class="container text-center">
-      <p>&copy; 2026 • Vinícius Batista Ribas</p>
-    </div>
-  </footer>
-
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center">
-    <i class="bi bi-arrow-up-short"></i>
-  </a>
-  <!-- Scripts -->
-  <script src="assets/js/main.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
-  <script>GLightbox({ selector: '.portfolio-lightbox' });</script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-
+    <!-- Scripts -->
+    <script src="assets/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+    <script> GLightbox({ selector: ".portfolio-lightbox" }); </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>
