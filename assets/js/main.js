@@ -52,7 +52,7 @@
   onScroll(document, updateNavbarActive);
 
   /* =====================
-   * Smooth scroll on click
+   * Smooth scroll
    ===================== */
 
   on(
@@ -75,65 +75,74 @@
   );
 
   /* =====================
-   * Typed.js
+   * Typed.js (SAFE)
    ===================== */
 
-  const typedEl = select(".typed");
+  try {
+    const typedEl = select(".typed");
 
-  if (typedEl && typedEl.dataset.typedItems) {
-    const strings = typedEl.dataset.typedItems.split(",");
+    if (typedEl && typedEl.dataset.typedItems && typeof Typed !== "undefined") {
+      const strings = typedEl.dataset.typedItems.split(",");
 
-    new Typed(".typed", {
-      strings,
-      loop: true,
-      typeSpeed: 100,
-      backSpeed: 50,
-      backDelay: 2000,
-    });
+      new Typed(".typed", {
+        strings,
+        loop: true,
+        typeSpeed: 100,
+        backSpeed: 50,
+        backDelay: 2000,
+      });
+    }
+  } catch (err) {
+    console.warn("Typed.js falhou:", err);
   }
 
   /* =====================
-   * Portfolio Isotope
+   * Isotope (SAFE)
    ===================== */
 
   window.addEventListener("load", () => {
-    const container = select(".portfolio-container");
-    if (!container) return;
+    try {
+      const container = select(".portfolio-container");
 
-    const isotope = new Isotope(container, {
-      itemSelector: ".portfolio-item",
-      layoutMode: "fitRows",
-    });
+      if (!container || typeof Isotope === "undefined") return;
 
-    on(
-      "click",
-      "#portfolio-flters li",
-      function (e) {
-        e.preventDefault();
+      const isotope = new Isotope(container, {
+        itemSelector: ".portfolio-item",
+        layoutMode: "fitRows",
+      });
 
-        select("#portfolio-flters li", true).forEach((el) =>
-          el.classList.remove("filter-active"),
-        );
+      on(
+        "click",
+        "#portfolio-flters li",
+        function (e) {
+          e.preventDefault();
 
-        this.classList.add("filter-active");
+          select("#portfolio-flters li", true).forEach((el) =>
+            el.classList.remove("filter-active"),
+          );
 
-        isotope.arrange({
-          filter: this.dataset.filter,
-        });
+          this.classList.add("filter-active");
 
-        isotope.on("arrangeComplete", () => {
-          if (window.AOS) AOS.refresh();
-        });
-      },
-      true,
-    );
+          isotope.arrange({
+            filter: this.dataset.filter,
+          });
+
+          isotope.on("arrangeComplete", () => {
+            if (window.AOS) AOS.refresh();
+          });
+        },
+        true,
+      );
+    } catch (err) {
+      console.warn("Isotope falhou:", err);
+    }
   });
 
   /* =====================
    * Lightbox
    ===================== */
 
-  if (window.GLightbox) {
+  if (typeof GLightbox !== "undefined") {
     GLightbox({
       selector: ".portfolio-lightbox",
     });
@@ -143,7 +152,7 @@
    * Swiper
    ===================== */
 
-  if (window.Swiper) {
+  if (typeof Swiper !== "undefined") {
     new Swiper(".portfolio-details-slider", {
       speed: 400,
       loop: true,
@@ -162,7 +171,7 @@
    * PureCounter
    ===================== */
 
-  if (window.PureCounter) {
+  if (typeof PureCounter !== "undefined") {
     new PureCounter();
   }
 
@@ -181,16 +190,21 @@
     onScroll(document, toggleBackToTop);
   }
 
+  /* =====================
+   * MOBILE MENU (FIX PRINCIPAL)
+   ===================== */
+
   const mobileNavToggle = select(".mobile-nav-toggle");
 
   if (mobileNavToggle) {
-    on("click", ".mobile-nav-toggle", function () {
+    mobileNavToggle.addEventListener("click", function () {
       document.body.classList.toggle("mobile-nav-active");
 
       this.classList.toggle("bi-list");
       this.classList.toggle("bi-x");
     });
   }
+
   on(
     "click",
     "#navbar .scrollto",
@@ -199,8 +213,11 @@
         document.body.classList.remove("mobile-nav-active");
 
         const toggle = select(".mobile-nav-toggle");
-        toggle.classList.add("bi-list");
-        toggle.classList.remove("bi-x");
+
+        if (toggle) {
+          toggle.classList.add("bi-list");
+          toggle.classList.remove("bi-x");
+        }
       }
     },
     true,
