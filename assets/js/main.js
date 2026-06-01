@@ -17,7 +17,7 @@
     if (!elements) return;
 
     if (all) {
-      elements.forEach(e => e.addEventListener(type, handler));
+      elements.forEach((e) => e.addEventListener(type, handler));
     } else {
       elements.addEventListener(type, handler);
     }
@@ -34,7 +34,7 @@
   const updateNavbarActive = () => {
     const position = window.scrollY + 200;
 
-    navbarLinks.forEach(link => {
+    navbarLinks.forEach((link) => {
       if (!link.hash) return;
 
       const section = select(link.hash);
@@ -43,7 +43,7 @@
       link.classList.toggle(
         "active",
         position >= section.offsetTop &&
-        position <= section.offsetTop + section.offsetHeight
+          position <= section.offsetTop + section.offsetHeight,
       );
     });
   };
@@ -55,19 +55,24 @@
    * Smooth scroll on click
    ===================== */
 
-  on("click", ".scrollto", function (e) {
-    if (!this.hash) return;
+  on(
+    "click",
+    ".scrollto",
+    function (e) {
+      if (!this.hash) return;
 
-    const target = select(this.hash);
-    if (!target) return;
+      const target = select(this.hash);
+      if (!target) return;
 
-    e.preventDefault();
+      e.preventDefault();
 
-    window.scrollTo({
-      top: target.offsetTop,
-      behavior: "smooth"
-    });
-  }, true);
+      window.scrollTo({
+        top: target.offsetTop,
+        behavior: "smooth",
+      });
+    },
+    true,
+  );
 
   /* =====================
    * Typed.js
@@ -83,7 +88,7 @@
       loop: true,
       typeSpeed: 100,
       backSpeed: 50,
-      backDelay: 2000
+      backDelay: 2000,
     });
   }
 
@@ -97,25 +102,31 @@
 
     const isotope = new Isotope(container, {
       itemSelector: ".portfolio-item",
-      layoutMode: "fitRows"
+      layoutMode: "fitRows",
     });
 
-    on("click", "#portfolio-flters li", function (e) {
-      e.preventDefault();
+    on(
+      "click",
+      "#portfolio-flters li",
+      function (e) {
+        e.preventDefault();
 
-      select("#portfolio-flters li", true)
-        .forEach(el => el.classList.remove("filter-active"));
+        select("#portfolio-flters li", true).forEach((el) =>
+          el.classList.remove("filter-active"),
+        );
 
-      this.classList.add("filter-active");
+        this.classList.add("filter-active");
 
-      isotope.arrange({
-        filter: this.dataset.filter
-      });
+        isotope.arrange({
+          filter: this.dataset.filter,
+        });
 
-      isotope.on("arrangeComplete", () => {
-        if (window.AOS) AOS.refresh();
-      });
-    }, true);
+        isotope.on("arrangeComplete", () => {
+          if (window.AOS) AOS.refresh();
+        });
+      },
+      true,
+    );
   });
 
   /* =====================
@@ -124,7 +135,7 @@
 
   if (window.GLightbox) {
     GLightbox({
-      selector: ".portfolio-lightbox"
+      selector: ".portfolio-lightbox",
     });
   }
 
@@ -138,12 +149,12 @@
       loop: true,
       autoplay: {
         delay: 5000,
-        disableOnInteraction: false
+        disableOnInteraction: false,
       },
       pagination: {
         el: ".swiper-pagination",
-        clickable: true
-      }
+        clickable: true,
+      },
     });
   }
 
@@ -169,25 +180,29 @@
     window.addEventListener("load", toggleBackToTop);
     onScroll(document, toggleBackToTop);
   }
-  
-    const mobileNavToggle = select(".mobile-nav-toggle");
 
-    if (mobileNavToggle) {
+  const mobileNavToggle = select(".mobile-nav-toggle");
+
+  if (mobileNavToggle) {
     on("click", ".mobile-nav-toggle", function () {
-        document.body.classList.toggle("mobile-nav-active");
+      document.body.classList.toggle("mobile-nav-active");
 
-        this.classList.toggle("bi-list");
-        this.classList.toggle("bi-x");
+      this.classList.toggle("bi-list");
+      this.classList.toggle("bi-x");
     });
-    }
-    on("click", "#navbar .scrollto", function () {
-  if (document.body.classList.contains("mobile-nav-active")) {
-    document.body.classList.remove("mobile-nav-active");
-
-    const toggle = select(".mobile-nav-toggle");
-    toggle.classList.add("bi-list");
-    toggle.classList.remove("bi-x");
   }
-    }, true);
+  on(
+    "click",
+    "#navbar .scrollto",
+    function () {
+      if (document.body.classList.contains("mobile-nav-active")) {
+        document.body.classList.remove("mobile-nav-active");
 
+        const toggle = select(".mobile-nav-toggle");
+        toggle.classList.add("bi-list");
+        toggle.classList.remove("bi-x");
+      }
+    },
+    true,
+  );
 })();

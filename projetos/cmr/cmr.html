@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CRM Sales Analysis — Relatório | Vinícius Batista Ribas</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600;700;800&family=Open+Sans:wght@300;400;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
+  <link href="../cmr/cmr.css" rel="stylesheet" />
+
+</head>
+<body>
+
+<!-- ===== HERO ===== -->
+<div class="report-hero">
+  <div class="hero-inner">
+    <a href="../../index.html#portfolio" class="back-link">
+      <i class="bi bi-arrow-left"></i> Voltar ao portfólio
+    </a>
+    <h1>CRM <span>Sales</span> Analysis</h1>
+    <p class="subtitle">
+      Análise exploratória e estratégica de oportunidades de vendas com SQL e Google Sheets,
+      identificando padrões no funil comercial e gerando insights orientados a dados.
+    </p>
+    <div class="tag-row">
+      <span class="tag">SQL</span>
+      <span class="tag">Google Sheets</span>
+      <span class="tag">Data Analysis</span>
+      <span class="tag">CRM</span>
+      <span class="tag">Business Intelligence</span>
+    </div>
+  </div>
+</div>
+
+<!-- ===== REPORT BODY ===== -->
+<div class="report-body">
+
+  <!-- 1. KPIs principais -->
+  <div class="report-section">
+    <div class="section-label">
+      <span class="num">01</span>
+      <h2>Visão Geral — KPIs Principais</h2>
+    </div>
+
+    <div class="kpi-grid">
+      <div class="kpi-card" data-delay="0">
+        <div class="kpi-icon"><i class="bi bi-currency-dollar"></i></div>
+        <div class="kpi-value">R$ 6,49M</div>
+        <div class="kpi-label">Receita total realizada</div>
+      </div>
+      <div class="kpi-card" data-delay="80">
+        <div class="kpi-icon"><i class="bi bi-graph-up-arrow"></i></div>
+        <div class="kpi-value">R$ 10,44M</div>
+        <div class="kpi-label">Potencial máximo (sem descontos)</div>
+      </div>
+      <div class="kpi-card" data-delay="160">
+        <div class="kpi-icon"><i class="bi bi-list-check"></i></div>
+        <div class="kpi-value">8.800</div>
+        <div class="kpi-label">Oportunidades registradas</div>
+      </div>
+      <div class="kpi-card accent-won" data-delay="240">
+        <div class="kpi-icon"><i class="bi bi-trophy"></i></div>
+        <div class="kpi-value">4.238</div>
+        <div class="kpi-label">Vendas concluídas (Won)</div>
+      </div>
+      <div class="kpi-card accent-yellow" data-delay="320">
+        <div class="kpi-icon"><i class="bi bi-percent"></i></div>
+        <div class="kpi-value">48,16%</div>
+        <div class="kpi-label">Taxa de conversão geral</div>
+      </div>
+      <div class="kpi-card accent-lost" data-delay="400">
+        <div class="kpi-icon"><i class="bi bi-x-circle"></i></div>
+        <div class="kpi-value">R$ 3,95M</div>
+        <div class="kpi-label">Gap por descontos aplicados</div>
+      </div>
+    </div>
+
+    <div class="report-card">
+      <p>
+        A receita realizada de <strong>R$ 6.494.956</strong> representa uma diferença de
+        <strong>R$ 3.945.307</strong> em relação ao potencial máximo de R$ 10.440.263.
+        Esse gap evidencia o impacto direto de negociações e descontos ao longo do processo comercial —
+        um ponto crítico para análise de margem e política comercial.
+      </p>
+    </div>
+  </div>
+
+  <!-- 2. Funil de Vendas -->
+  <div class="report-section">
+    <div class="section-label">
+      <span class="num">02</span>
+      <h2>Funil de Vendas</h2>
+    </div>
+
+    <div class="report-card">
+      <div class="funnel-wrap">
+        <div class="funnel-bar-group">
+          <p style="margin-bottom:18px; font-weight:600; font-size:14px; color:#173b6c;">
+            Distribuição das Oportunidades
+          </p>
+          <div class="funnel-item">
+            <div class="funnel-item-label">
+              <span>✅ Won (Convertidas)</span>
+              <span>48,16%</span>
+            </div>
+            <div class="funnel-bar-track">
+              <div class="funnel-bar-fill fill-won" data-width="48.16"></div>
+            </div>
+          </div>
+          <div class="funnel-item">
+            <div class="funnel-item-label">
+              <span>❌ Lost (Perdidas)</span>
+              <span>28,10%</span>
+            </div>
+            <div class="funnel-bar-track">
+              <div class="funnel-bar-fill fill-lost" data-width="28.10"></div>
+            </div>
+          </div>
+          <div class="funnel-item">
+            <div class="funnel-item-label">
+              <span>⏳ Em Andamento</span>
+              <span>23,74%</span>
+            </div>
+            <div class="funnel-bar-track">
+              <div class="funnel-bar-fill fill-progress" data-width="23.74"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="time-cards">
+          <p style="font-weight:600; font-size:14px; color:#173b6c; margin-bottom:6px;">Tempo Médio de Fechamento</p>
+          <div class="time-card">
+            <div class="time-dot" style="background: var(--won);"></div>
+            <div class="time-info">
+              <div class="label">Vendas Concluídas (Won)</div>
+              <div class="val">51,78 <span class="unit">dias</span></div>
+            </div>
+          </div>
+          <div class="time-card">
+            <div class="time-dot" style="background: var(--lost);"></div>
+            <div class="time-info">
+              <div class="label">Vendas Perdidas (Lost)</div>
+              <div class="val">41,48 <span class="unit">dias</span></div>
+            </div>
+          </div>
+          <p style="font-size:13px; color:#888; margin-top:10px; line-height:1.6;">
+            Negociações mais longas tendem a gerar melhores resultados. Processos curtos estão associados a maior taxa de perda.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. Performance Comercial -->
+  <div class="report-section">
+    <div class="section-label">
+      <span class="num">03</span>
+      <h2>Performance Comercial</h2>
+    </div>
+
+    <div class="report-card">
+      <p>
+        A análise evidencia diferenças relevantes entre volume, receita e eficiência.
+        <strong>Darchel Schelecht</strong> lidera em receita (R$ 1.153.214), mas não figura entre os mais eficientes em conversão.
+        Isso demonstra que alto volume não garante maior efetividade.
+        O gerente <strong>Melvin Marxen</strong> apresenta o maior volume de receita entre os gestores (R$ 2.251.930).
+      </p>
+      <div class="perf-grid">
+        <div class="perf-block">
+          <h4><i class="bi bi-person-badge" style="color:var(--primary)"></i> Top Receita por Vendedor</h4>
+          <div class="perf-row"><span class="perf-name">Darchel Schelecht</span><span class="perf-val">R$ 1.153.214</span></div>
+          <div class="perf-row"><span class="perf-name">Vicki Laflamme</span><span class="perf-val">R$ 478.396</span></div>
+          <div class="perf-row"><span class="perf-name">Kary Hendricson</span><span class="perf-val">R$ 454.298</span></div>
+          <div class="perf-row"><span class="perf-name">Cassey Cress</span><span class="perf-val">R$ 450.489</span></div>
+          <div class="perf-row"><span class="perf-name">Donn Cantrell</span><span class="perf-val">R$ 445.860</span></div>
+        </div>
+        <div class="perf-block">
+          <h4><i class="bi bi-bar-chart" style="color:var(--won)"></i> Top Taxa de Conversão</h4>
+          <div class="perf-row"><span class="perf-name">Reed Clapper</span><span class="perf-val green">65,40%</span></div>
+          <div class="perf-row"><span class="perf-name">Garret Kinder</span><span class="perf-val green">60,98%</span></div>
+          <div class="perf-row"><span class="perf-name">Donn Cantrell</span><span class="perf-val green">57,45%</span></div>
+          <div class="perf-row"><span class="perf-name">Hayden Neloms</span><span class="perf-val green">52,97%</span></div>
+          <div class="perf-row"><span class="perf-name">Cecily Lampkin</span><span class="perf-val green">52,71%</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. Performance Regional -->
+  <div class="report-section">
+    <div class="section-label">
+      <span class="num">04</span>
+      <h2>Performance por Região</h2>
+    </div>
+
+    <div class="report-card">
+      <p>
+        Os <strong>Estados Unidos</strong> concentram o maior volume de oportunidades e receita, mas apresentam
+        desempenho inferior em taxa de conversão. Regiões como <strong>Panamá</strong>, <strong>Alemanha</strong>
+        e <strong>Polônia</strong> se destacam pela alta eficiência no fechamento — suas práticas devem ser replicadas.
+      </p>
+      <div class="region-grid">
+        <div class="region-card"><div class="flag">🇵🇦</div><div class="r-name">Panamá</div><div class="r-rate">68,82%</div></div>
+        <div class="region-card"><div class="flag">🇩🇪</div><div class="r-name">Alemanha</div><div class="r-rate">67,28%</div></div>
+        <div class="region-card"><div class="flag">🇵🇱</div><div class="r-name">Polônia</div><div class="r-rate">63,39%</div></div>
+        <div class="region-card"><div class="flag">🇯🇴</div><div class="r-name">Jordânia</div><div class="r-rate">59,10%</div></div>
+        <div class="region-card"><div class="flag">🇧🇪</div><div class="r-name">Bélgica</div><div class="r-rate">57,90%</div></div>
+        <div class="region-card"><div class="flag">🇺🇸</div><div class="r-name">EUA</div><div class="r-rate">57,43%</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 5. Perfil de Clientes -->
+  <div class="report-section">
+    <div class="section-label">
+      <span class="num">05</span>
+      <h2>Perfil de Clientes</h2>
+    </div>
+
+    <div class="report-card">
+      <p>
+        A empresa <strong>Kan-code</strong> é o principal cliente, liderando tanto em receita (R$ 341.455)
+        quanto em volume de compras (115 pedidos). A <strong>Hottechi</strong>, apesar do alto volume (111 compras),
+        apresenta receita proporcional menor — concentração em produtos de menor valor.
+        O setor de <strong>varejo</strong> domina em receita (R$ 1.867.528), enquanto o setor de <strong>emprego</strong>
+        tem o menor desempenho (R$ 436.174).
+      </p>
+    </div>
+  </div>
+
+  <!-- 6. Produtos -->
+  <div class="report-section">
+    <div class="section-label">
+      <span class="num">06</span>
+      <h2>Análise de Produtos</h2>
+    </div>
+
+    <div class="report-card">
+      <p>
+        O <strong>GTXPro</strong> lidera em receita (R$ 3.510.578), enquanto o <strong>GTX Basic</strong>
+        domina em volume de vendas (915 unidades). O <strong>GTX Plus Pro</strong> apresenta a maior taxa
+        de conversão (49,48%), sugerindo forte alinhamento entre proposta de valor e demanda.
+        O <strong>GTK 500</strong> possui o pior desempenho em conversão (37,50%).
+      </p>
+      <div class="product-list">
+        <div class="product-row">
+          <span class="product-rank">#1 receita</span>
+          <span class="product-name">GTXPro</span>
+          <div class="product-meta"><span>Receita: <strong>R$ 3,51M</strong></span><span>Conversão: <strong>49,26%</strong></span></div>
+        </div>
+        <div class="product-row">
+          <span class="product-rank">#1 volume</span>
+          <span class="product-name">GTX Basic</span>
+          <div class="product-meta"><span>Vendas: <strong>915 un.</strong></span><span>Conversão: <strong>49,04%</strong></span></div>
+        </div>
+        <div class="product-row">
+          <span class="product-rank">#1 conversão</span>
+          <span class="product-name">GTX Plus Pro</span>
+          <div class="product-meta"><span>Vendas: <strong>479 un.</strong></span><span>Conversão: <strong>49,48%</strong></span></div>
+        </div>
+        <div class="product-row">
+          <span class="product-rank" style="background:#fde8e8; color:var(--lost)">menor conv.</span>
+          <span class="product-name">GTK 500</span>
+          <div class="product-meta"><span>Vendas: <strong>15 un.</strong></span><span>Conversão: <strong style="color:var(--lost)">37,50%</strong></span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 7. Tendência Temporal -->
+  <div class="report-section">
+    <div class="section-label">
+      <span class="num">07</span>
+      <h2>Tendência Temporal</h2>
+    </div>
+
+    <div class="report-card">
+      <p>
+        A análise temporal (mar–dez/2017) revela um padrão recorrente de <strong>queda seguida por recuperação</strong>
+        nos meses subsequentes. A taxa de conversão acompanha o volume, indicando correlação direta entre os dois indicadores.
+        O <strong>pior mês foi abril</strong>, com taxa de conversão de 48,63%. Apesar dos dados serem simulados,
+        o comportamento sugere possível sazonalidade que pode ser explorada estrategicamente.
+      </p>
+    </div>
+  </div>
+
+  <!-- 8. Conclusão -->
+  <div class="report-section">
+    <div class="section-label">
+      <span class="num">08</span>
+      <h2>Conclusão e Recomendações</h2>
+    </div>
+
+    <div class="report-card">
+      <p style="margin-bottom:20px;">
+        A análise demonstra que, apesar do alto volume de oportunidades, há espaço claro para
+        melhoria na eficiência do processo comercial — especialmente na gestão de descontos e
+        na replicação das práticas das regiões e vendedores mais eficientes.
+      </p>
+
+      <div class="insights-grid">
+        <div class="insight-block findings">
+          <h4><i class="bi bi-exclamation-circle"></i> Principais Achados</h4>
+          <ul>
+            <li>Alto impacto de descontos na receita final (gap de R$ 3,95M)</li>
+            <li>Diferença entre volume e eficiência nos vendedores</li>
+            <li>Regiões com alto volume e baixa conversão (EUA)</li>
+            <li>Variação relevante entre produtos (GTXPro vs GTK 500)</li>
+            <li>Concentração de receita em poucos clientes (Kan-code)</li>
+          </ul>
+        </div>
+        <div class="insight-block recs">
+          <h4><i class="bi bi-lightbulb"></i> Recomendações Estratégicas</h4>
+          <ul>
+            <li>Revisar política de descontos para proteger margens</li>
+            <li>Replicar práticas das regiões com alta conversão</li>
+            <li>Priorizar clientes de alto valor e recorrência</li>
+            <li>Reposicionar produtos com baixa taxa de conversão</li>
+            <li>Focar em eficiência comercial, não apenas volume</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /report-body -->
+
+<!-- ===== FOOTER ===== -->
+<div class="report-footer">
+  <p>
+    <a href="../../index.html#portfolio"><i class="bi bi-arrow-left"></i> Voltar ao portfólio</a>
+    &nbsp;·&nbsp;
+    © 2026 Vinícius Batista Ribas
+    &nbsp;·&nbsp;
+  </p>
+</div>
+
+
+<script>
+  // Animate on scroll
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const el = entry.target;
+        const delay = el.dataset.delay || 0;
+        setTimeout(() => el.classList.add('visible'), Number(delay));
+        observer.unobserve(el);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.kpi-card, .report-card').forEach(el => observer.observe(el));
+
+  // Animate funnel bars
+  const barObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.querySelectorAll('.funnel-bar-fill').forEach(bar => {
+          bar.style.width = bar.dataset.width + '%';
+        });
+        barObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.3 });
+
+  document.querySelectorAll('.funnel-wrap').forEach(el => barObserver.observe(el));
+</script>
+</body>
+</html>

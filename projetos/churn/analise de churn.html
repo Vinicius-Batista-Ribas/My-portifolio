@@ -1,0 +1,523 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Analise de Churn  — Relatório | Vinícius Batista Ribas</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600;700;800&family=Open+Sans:wght@300;400;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
+  <link href="../churn/churn.css" rel="stylesheet" />
+
+</head>
+<body>
+
+<body>
+ 
+<!-- HERO -->
+<div class="report-hero">
+  <div class="hero-inner">
+    <a href="../../index.html#portfolio" class="back-link">
+      <i class="bi bi-arrow-left"></i> Voltar ao portfólio
+    </a>
+    <h1>Análise de <span>Churn</span></h1>
+    <p class="subtitle">
+      Análise exploratória de dados (EDA) desenvolvida em Python com foco na identificação de padrões de evasão de clientes bancários.
+      O estudo investiga fatores comportamentais, financeiros e demográficos associados ao churn,
+      além de propor um modelo simples de score de risco para auxiliar estratégias de retenção.
+    </p>
+    <div class="tag-row">
+      <span class="tag">Python</span>
+      <span class="tag">EDA</span>
+      <span class="tag">Data Analysis</span>
+      <span class="tag">Risk Scoring</span>
+      <span class="tag">Retention</span>
+      <span class="tag">Customer Analytics</span>
+    </div>
+  </div>
+</div>
+ 
+<!-- REPORT BODY -->
+<div class="report-body">
+ 
+  <!-- 01. KPIs -->
+  <div class="report-section">
+    <div class="section-label">
+      <span class="num">01</span>
+      <h2>Visão Geral — Principais Métricas</h2>
+    </div>
+ 
+    <div class="kpi-grid">
+      <div class="kpi-card" data-delay="0">
+        <div class="kpi-icon"><i class="bi bi-people"></i></div>
+        <div class="kpi-value">10.000</div>
+        <div class="kpi-label">Clientes analisados</div>
+      </div>
+      <div class="kpi-card accent-lost" data-delay="60">
+        <div class="kpi-icon"><i class="bi bi-person-x"></i></div>
+        <div class="kpi-value">20,4%</div>
+        <div class="kpi-label">Taxa geral de Churn</div>
+      </div>
+      <div class="kpi-card accent-won" data-delay="120">
+        <div class="kpi-icon"><i class="bi bi-person-check"></i></div>
+        <div class="kpi-value">7.963</div>
+        <div class="kpi-label">Clientes retidos</div>
+      </div>
+      <div class="kpi-card accent-yellow" data-delay="180">
+        <div class="kpi-icon"><i class="bi bi-door-open"></i></div>
+        <div class="kpi-value">2.037</div>
+        <div class="kpi-label">Clientes que saíram</div>
+      </div>
+      <div class="kpi-card accent-yellow" data-delay="240">
+        <div class="kpi-icon"><i class="bi bi-moon"></i></div>
+        <div class="kpi-value">33%</div>
+        <div class="kpi-label">Churn entre clientes inativos</div>
+      </div>
+      <div class="kpi-card accent-lost" data-delay="300">
+        <div class="kpi-icon"><i class="bi bi-exclamation-triangle"></i></div>
+        <div class="kpi-value">58%</div>
+        <div class="kpi-label">Churn no score máximo de risco (Score 3 — 204 clientes)</div>
+      </div>
+    </div>
+ 
+    <div class="report-card">
+      <p>
+        A análise identificou uma taxa geral de churn de <strong>20,4%</strong> — aproximadamente 1 em cada 5 clientes deixou o banco.
+        Os padrões encontrados demonstram forte relação entre evasão e fatores como <strong>inatividade, idade elevada e alto saldo bancário</strong>.
+        A combinação desses fatores permitiu construir um score de segmentação de risco com forte capacidade preditiva, atingindo <strong>58% de churn</strong> entre os 204 clientes no nível máximo de risco.
+      </p>
+    </div>
+  </div>
+ 
+  <!-- 02. Visão Geral do Churn -->
+  <div class="report-section">
+    <div class="section-label">
+      <span class="num">02</span>
+      <h2>Distribuição do Churn</h2>
+    </div>
+ 
+    <div class="report-card">
+      <div class="chart-grid-2">
+ 
+        <!-- Donut / distribuição da base -->
+        <div>
+          <div class="chart-title">Distribuição da base de clientes</div>
+          <div class="donut-wrap">
+            <svg id="donut-svg" viewBox="0 0 200 200" width="180" height="180">
+              <!-- background circle -->
+              <circle cx="100" cy="100" r="72" fill="none" stroke="#eef3f8" stroke-width="28"/>
+              <!-- churn arc -->
+              <circle id="donut-churn" cx="100" cy="100" r="72" fill="none"
+                stroke="var(--lost)" stroke-width="28"
+                stroke-dasharray="0 452"
+                stroke-dashoffset="113"
+                transform="rotate(-90 100 100)"
+                style="transition: stroke-dasharray 1.2s cubic-bezier(.4,0,.2,1)"/>
+              <!-- retained arc -->
+              <circle id="donut-retained" cx="100" cy="100" r="72" fill="none"
+                stroke="var(--won)" stroke-width="28"
+                stroke-dasharray="0 452"
+                stroke-dashoffset="113"
+                transform="rotate(-90 100 100)"
+                style="transition: stroke-dasharray 1.2s cubic-bezier(.4,0,.2,1) .1s"/>
+              <text x="100" y="96" text-anchor="middle" font-family="Raleway,sans-serif" font-weight="800" font-size="28" fill="#040b14">20,4%</text>
+              <text x="100" y="116" text-anchor="middle" font-family="Open Sans,sans-serif" font-size="11" fill="#888">Churn</text>
+            </svg>
+            <div class="donut-legend">
+              <div class="donut-legend-item">
+                <div class="donut-dot" style="background:var(--won)"></div>
+                <span>Clientes retidos</span>
+                <span class="donut-legend-val" style="color:var(--won)">79,6%</span>
+              </div>
+              <div class="donut-legend-item">
+                <div class="donut-dot" style="background:var(--lost)"></div>
+                <span>Clientes com churn</span>
+                <span class="donut-legend-val" style="color:var(--lost)">20,4%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+ 
+        <!-- Engajamento -->
+        <div>
+          <div class="chart-title">Churn por nível de engajamento</div>
+          <div class="bar-chart" style="margin-top:8px;">
+            <div class="bar-row">
+              <div class="bar-label">Clientes ativos</div>
+              <div class="bar-track">
+                <div class="bar-fill" data-width="18" style="background:var(--won)"><span>18% churn</span></div>
+              </div>
+              <div class="bar-pct">18%</div>
+            </div>
+            <div class="bar-row">
+              <div class="bar-label">Clientes inativos</div>
+              <div class="bar-track">
+                <div class="bar-fill" data-width="33" style="background:var(--lost)"><span>33% churn</span></div>
+              </div>
+              <div class="bar-pct">33%</div>
+            </div>
+          </div>
+          <div class="callout" style="margin-top:20px;">
+            Clientes inativos têm <strong>quase o dobro</strong> da taxa de churn em relação aos ativos — a inatividade é o sinal de alerta mais imediato.
+          </div>
+        </div>
+ 
+      </div>
+    </div>
+  </div>
+ 
+  <!-- 03. Perfil demográfico -->
+  <div class="report-section">
+    <div class="section-label">
+      <span class="num">03</span>
+      <h2>Perfil dos Clientes com Maior Tendência de Churn</h2>
+    </div>
+ 
+    <div class="report-card">
+      <p>
+        A análise demográfica revela diferenças relevantes entre os grupos. Clientes mais velhos apresentam maior propensão à evasão,
+        enquanto mulheres registram taxas significativamente superiores às dos homens.
+      </p>
+ 
+      <div class="chart-grid-2" style="margin-top:20px;">
+ 
+        <!-- Faixa etária -->
+        <div>
+          <div class="chart-title">Média de idade — Churn vs. Retenção</div>
+          <div class="bar-chart">
+            <div class="bar-row">
+              <div class="bar-label">Com churn</div>
+              <div class="bar-track">
+                <div class="bar-fill" data-width="90" style="background:var(--lost)"><span>45 anos</span></div>
+              </div>
+              <div class="bar-pct">45 a.</div>
+            </div>
+            <div class="bar-row">
+              <div class="bar-label">Retidos</div>
+              <div class="bar-track">
+                <div class="bar-fill" data-width="70" style="background:var(--won)"><span>35 anos</span></div>
+              </div>
+              <div class="bar-pct">35 a.</div>
+            </div>
+          </div>
+          <div class="callout">
+            Diferença de <strong>10 anos</strong> na média de idade. Clientes mais velhos apresentam risco consideravelmente maior de evasão.
+          </div>
+        </div>
+ 
+        <!-- Gênero -->
+        <div>
+          <div class="chart-title">Churn por gênero</div>
+          <div class="bar-chart">
+            <div class="bar-row">
+              <div class="bar-label">Mulheres</div>
+              <div class="bar-track">
+                <div class="bar-fill" data-width="50" style="background:var(--lost)"><span>25% churn</span></div>
+              </div>
+              <div class="bar-pct">25%</div>
+            </div>
+            <div class="bar-row">
+              <div class="bar-label">Homens</div>
+              <div class="bar-track">
+                <div class="bar-fill" data-width="34" style="background:var(--primary)"><span>17% churn</span></div>
+              </div>
+              <div class="bar-pct">17%</div>
+            </div>
+          </div>
+          <div class="callout">
+            Mulheres apresentam <strong>+47%</strong> de churn relativo em comparação aos homens, sugerindo diferenças na experiência com os serviços.
+          </div>
+        </div>
+ 
+      </div>
+    </div>
+  </div>
+ 
+  <!-- 04. Região -->
+  <div class="report-section">
+    <div class="section-label">
+      <span class="num">04</span>
+      <h2>Churn por Região</h2>
+    </div>
+ 
+    <div class="report-card">
+      <p>
+        A análise geográfica evidencia diferenças expressivas entre os países. A Alemanha concentra a maior taxa de churn da base —
+        mais que o dobro da França e da Espanha — sugerindo fatores regionais ligados à experiência do cliente ou à competitividade do mercado local.
+      </p>
+ 
+      <div class="region-grid">
+        <div class="region-card">
+          <div class="flag">🇫🇷</div>
+          <div class="r-name">França</div>
+          <div class="r-rate">16,15%</div>
+        </div>
+        <div class="region-card highlight">
+          <div class="region-badge">⚠ Maior risco</div>
+          <div class="flag">🇩🇪</div>
+          <div class="r-name">Alemanha</div>
+          <div class="r-rate">32,44%</div>
+        </div>
+        <div class="region-card">
+          <div class="flag">🇪🇸</div>
+          <div class="r-name">Espanha</div>
+          <div class="r-rate">16,67%</div>
+        </div>
+      </div>
+ 
+      <!-- Bar chart regional -->
+      <div class="bar-chart" style="margin-top:20px;">
+        <div class="bar-row">
+          <div class="bar-label">Alemanha</div>
+          <div class="bar-track">
+            <div class="bar-fill" data-width="64.88" style="background:var(--lost)"><span>32,44%</span></div>
+          </div>
+          <div class="bar-pct">32,44%</div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-label">Espanha</div>
+          <div class="bar-track">
+            <div class="bar-fill" data-width="33.34" style="background:var(--primary)"><span>16,67%</span></div>
+          </div>
+          <div class="bar-pct">16,67%</div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-label">França</div>
+          <div class="bar-track">
+            <div class="bar-fill" data-width="32.3" style="background:var(--primary)"><span>16,15%</span></div>
+          </div>
+          <div class="bar-pct">16,15%</div>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+  <!-- 05. Padrões financeiros -->
+  <div class="report-section">
+    <div class="section-label">
+      <span class="num">05</span>
+      <h2>Padrões Financeiros e Comportamentais</h2>
+    </div>
+ 
+    <div class="report-card">
+      <p>
+        Os dados demonstram correlação clara entre comportamento financeiro e evasão.
+        Curiosamente, clientes com maior saldo bancário apresentam risco superior — possivelmente por receberem propostas mais competitivas de outros bancos ou por terem expectativas de serviço mais elevadas.
+      </p>
+ 
+      <div class="factor-grid">
+        <div class="factor-card">
+          <div class="factor-icon">💰</div>
+          <div class="factor-text">
+            <div class="f-title">Alto Saldo Bancário</div>
+            <div class="f-desc">Clientes com saldo elevado apresentam maior propensão ao churn, contrariando a intuição inicial.</div>
+            <span class="f-badge badge-red">Alto impacto</span>
+          </div>
+        </div>
+        <div class="factor-card">
+          <div class="factor-icon">😴</div>
+          <div class="factor-text">
+            <div class="f-title">Inatividade</div>
+            <div class="f-desc">Principal fator comportamental. Clientes inativos têm churn de 33% vs 18% nos ativos.</div>
+            <span class="f-badge badge-red">Alto impacto</span>
+          </div>
+        </div>
+        <div class="factor-card">
+          <div class="factor-icon">📦</div>
+          <div class="factor-text">
+            <div class="f-title">Múltiplos Produtos (3+)</div>
+            <div class="f-desc">Clientes com 3 ou mais produtos apresentaram maior taxa de evasão — possível sinal de overload ou insatisfação com o portfólio.</div>
+            <span class="f-badge badge-yellow">Médio impacto</span>
+          </div>
+        </div>
+        <div class="factor-card">
+          <div class="factor-icon">💳</div>
+          <div class="factor-text">
+            <div class="f-title">Cartão de Crédito</div>
+            <div class="f-desc">Não apresentou impacto relevante no comportamento de churn. Fator neutro para segmentação.</div>
+            <span class="f-badge badge-blue">Sem impacto</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+  <!-- 06. Score de Risco -->
+  <div class="report-section">
+    <div class="section-label">
+      <span class="num">06</span>
+      <h2>Modelo de Score de Risco</h2>
+    </div>
+ 
+    <div class="report-card">
+      <p>
+        Foi construído um score simples baseado nos três principais fatores identificados na análise: <strong>inatividade</strong>, <strong>idade elevada</strong> e <strong>alto saldo bancário</strong>.
+        Cada fator contribui com 1 ponto, resultando em um score de 0 a 3.
+        O aumento progressivo da taxa de churn valida a capacidade de segmentação do modelo.
+      </p>
+ 
+      <div class="score-chart" id="score-chart">
+        <div class="score-col">
+          <div class="score-pct-label">6%</div>
+          <div class="score-bar-wrap">
+            <div class="score-bar" data-height="10.3" style="background: var(--won);"></div>
+          </div>
+          <div class="score-name">Score 0</div>
+          <div class="score-desc">Nenhum fator de risco</div>
+        </div>
+        <div class="score-col">
+          <div class="score-pct-label">12%</div>
+          <div class="score-bar-wrap">
+            <div class="score-bar" data-height="20.7" style="background: var(--primary);"></div>
+          </div>
+          <div class="score-name">Score 1</div>
+          <div class="score-desc">1 fator de risco</div>
+        </div>
+        <div class="score-col">
+          <div class="score-pct-label">28%</div>
+          <div class="score-bar-wrap">
+            <div class="score-bar" data-height="48.3" style="background: var(--in-progress);"></div>
+          </div>
+          <div class="score-name">Score 2</div>
+          <div class="score-desc">2 fatores de risco</div>
+        </div>
+        <div class="score-col">
+          <div class="score-pct-label">58%</div>
+          <div class="score-bar-wrap">
+            <div class="score-bar" data-height="100" style="background: var(--lost);"></div>
+          </div>
+          <div class="score-name">Score 3</div>
+          <div class="score-desc">3 fatores de risco (204 clientes)</div>
+        </div>
+      </div>
+ 
+      <div class="callout" style="margin-top:24px;">
+        O score salta de <strong>6%</strong> (sem risco) para <strong>58%</strong> no nível máximo — uma diferença de <strong>9,7×</strong>.
+        Isso demonstra alta capacidade de separação e potencial imediato para uso em campanhas de retenção preventiva.
+      </div>
+    </div>
+  </div>
+ 
+  <!-- 07. Conclusão -->
+  <div class="report-section">
+    <div class="section-label">
+      <span class="num">07</span>
+      <h2>Conclusão e Recomendações</h2>
+    </div>
+ 
+    <div class="report-card">
+      <p>
+        A análise demonstra que o churn está fortemente relacionado ao nível de engajamento e ao perfil financeiro dos clientes.
+        A identificação desses padrões permite criar estratégias preventivas mais eficientes,
+        direcionando ações de retenção para os segmentos com maior risco de evasão — especialmente os 204 clientes classificados com Score 3.
+      </p>
+ 
+      <div class="insights-grid">
+        <div class="insight-block findings">
+          <h4><i class="bi bi-exclamation-circle"></i> Principais Achados</h4>
+          <ul>
+            <li>Clientes inativos têm quase o dobro da taxa de churn (33% vs 18%)</li>
+            <li>A Alemanha concentra o dobro do churn em relação à França e Espanha</li>
+            <li>Clientes mais velhos (média 45 a.) apresentam maior risco de saída</li>
+            <li>Mulheres têm churn 47% maior que os homens em termos relativos</li>
+            <li>Alto saldo bancário está associado a maior propensão à evasão</li>
+            <li>O score de risco demonstrou forte capacidade de segmentação (6× → 58%)</li>
+          </ul>
+        </div>
+        <div class="insight-block recs">
+          <h4><i class="bi bi-lightbulb"></i> Recomendações Estratégicas</h4>
+          <ul>
+            <li>Criar campanhas de reengajamento para clientes inativos antes dos 60 dias</li>
+            <li>Priorizar contato proativo com os 204 clientes de Score 3</li>
+            <li>Desenvolver estratégias regionais específicas para a Alemanha</li>
+            <li>Investigar a experiência das clientes do gênero feminino</li>
+            <li>Revisar a proposta de valor para clientes com alto saldo e múltiplos produtos</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+</div><!-- /report-body -->
+ 
+<div class="report-footer">
+  <p>
+    <a href="../../index.html#portfolio"><i class="bi bi-arrow-left"></i> Voltar ao portfólio</a>
+    &nbsp;·&nbsp;
+    © 2026 Vinícius Batista Ribas
+  </p>
+</div>
+ 
+<script>
+  // ── Intersection Observer: cards ──
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const el = entry.target;
+        const delay = el.dataset.delay || 0;
+        setTimeout(() => el.classList.add('visible'), Number(delay));
+        observer.unobserve(el);
+      }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.kpi-card, .report-card').forEach(el => observer.observe(el));
+ 
+  // ── Bar fills ──
+  const barObs = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.querySelectorAll('.bar-fill[data-width]').forEach(bar => {
+          bar.style.width = bar.dataset.width + '%';
+        });
+        barObs.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.3 });
+  document.querySelectorAll('.report-card').forEach(el => barObs.observe(el));
+ 
+  // ── Donut chart ──
+  const donutObs = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const circumference = 2 * Math.PI * 72; // ~452.4
+        const churnFrac = 0.204;
+        const retainedFrac = 0.796;
+        const churnLen = circumference * churnFrac;
+        const retainedLen = circumference * retainedFrac;
+ 
+        const churnArc = document.getElementById('donut-churn');
+        const retainedArc = document.getElementById('donut-retained');
+ 
+        // churn arc starts at top
+        churnArc.style.strokeDasharray = `${churnLen} ${circumference - churnLen}`;
+        churnArc.style.strokeDashoffset = 0;
+ 
+        // retained arc starts right after churn arc
+        const retainedOffset = -(churnLen);
+        retainedArc.style.strokeDasharray = `${retainedLen} ${circumference - retainedLen}`;
+        retainedArc.style.strokeDashoffset = retainedOffset;
+ 
+        donutObs.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.3 });
+  const donutEl = document.getElementById('donut-svg');
+  if (donutEl) donutObs.observe(donutEl.closest('.report-card'));
+ 
+  // ── Score step chart ──
+  const scoreObs = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.querySelectorAll('.score-bar[data-height]').forEach(bar => {
+          bar.style.height = bar.dataset.height + '%';
+        });
+        scoreObs.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.3 });
+  const scoreChart = document.getElementById('score-chart');
+  if (scoreChart) scoreObs.observe(scoreChart.closest('.report-card'));
+</script>
+</body>
+</html>
